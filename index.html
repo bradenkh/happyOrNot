@@ -1,588 +1,1959 @@
-<!DOCTYPE html>
-<html style="font-family: Arial, Helvetica, sans-serif;"">
+<html lang="en">
+   <head>
+      <link rel="stylesheet" href="/happyOrNot.css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-   <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <style></style>
-</head>
+      <script async="" src="//www.google-analytics.com/analytics.js"></script>
+      <script
+         href="https://td.byui.edu/TDPortal/Content/Scripts/jquery/2.2.4/jquery.min.js?v=20220416003630"
+      ></script>
+      <script
+         href="https://td.byui.edu/TDPortal/Content/Scripts/jquery-migrate/1.4.1/jquery-migrate.min.js?v=20220416003630"
+      ></script>
+      <script
+         href="https://td.byui.edu/TDPortal/Content/Scripts/jquery-ui/1.12.1/jquery-ui-1.12.1.custom.timepicker.min.js?v=20220416003630"
+      ></script>
+      <link
+         href="https://td.byui.edu/TDPortal/Content/Styles/jquery-ui/1.12.1/jquery-ui.compiled.min.css?v=20220416003630"
+         rel="stylesheet"
+         type="text/css"
+      />
+      <link
+         href="https://td.byui.edu/TDPortal/Content/bootstrap/3.4.1/dist/css/bootstrap.min.css?v=20220416003630"
+         rel="stylesheet"
+         type="text/css"
+         id="lnkBootstrapCSS"
+      />
+      <script
+         href="https://td.byui.edu/TDPortal/Content/bootstrap/3.4.1/dist/js/bootstrap.min.js?v=20220416003630"
+      ></script>
+      <link
+         href="https://td.byui.edu/TDClient/Styles/bootstrap_custom.min.css?v=20220416003628"
+         rel="stylesheet"
+         type="text/css"
+      />
+      <link
+         href="https://td.byui.edu/TDClient/Styles/TDStyles.min.css?v=20220416003628"
+         rel="stylesheet"
+         type="text/css"
+      />
+      <link
+         href="https://td.byui.edu/TDPortal/BE/Style/1/TDClient/87?v=20220408201437"
+         rel="stylesheet"
+         type="text/css"
+      />
+      <script
+         href="https://td.byui.edu/TDPortal/Content/Scripts/tdx/TDJSFramework.compiled.min.js?v=20220416003630"
+      ></script>
+      <script
+         href="https://td.byui.edu/TDPortal/Content/Scripts/underscore/1.12.1/underscore-min.js?v=20220416003630"
+      ></script>
+      <script
+         href="https://td.byui.edu/TDClient/Scripts/clientOS.min.js?v=20220416003628"
+      ></script>
+      <script
+         href="https://td.byui.edu/TDClient/Scripts/collapseMe.min.js?v=20220416003628"
+      ></script>
+      <script
+         href="https://td.byui.edu/TDClient/Scripts/tdsearchfilter.min.js?v=20220416003628"
+      ></script>
+      <script
+         href="https://td.byui.edu/TDClient/Scripts/SiteSearch.min.js?v=20220416003628"
+      ></script>
+      <script
+         href="https://td.byui.edu/TDPortal/Content/Scripts/tdx/elasticsearchAutocomplete/elasticsearchAutocomplete.min.js?v=20220416003630"
+      ></script>
 
-<body style="width: 40%; margin: auto">
-   <div style="
-        background-color: rgb(83, 83, 253);
-        height: auto;
-        text-align: center;
-        color: white;""
-        >
-      <h1>This is a sample byui page</h1>
-      <div class="container gutter-top gutter-bottom-lg">
-         <span id="ctl00_cpContent_lblResults" class="red"></span>
+      <script
+         async=""
+         src="//www.googletagmanager.com/gtag/js?id=UA-12079604-6"
+      ></script>
+      <script
+         href="https://td.byui.edu/TDClient/Scripts/DesktopModules.min.js?v=20220416003628"
+      ></script>
 
-         <div class="row">
-            <div id="Column1" class="col-md-12 ui-sortable">
-               <div class="desktop-module">
-                  <div id="201162" class="desktop-module panel panel-default no-border">
-                     <div class="ModuleContent">
-                        <div style="overflow: hidden">
-                           <p>
-                              <br />
-                              <img alt=""
-                                 src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=497f61c3-2e67-436c-b65c-70f09e325a83.jpg"
-                                 style="width: 1200px; height: 281px" />
-                           </p>
+      <meta property="og:title" content="Home" />
+      <meta property="og:type" content="website" />
+      <meta
+         property="og:url"
+         content="https://td.byui.edu/TDClient/87/Portal/Home/?DesktopID=2bb2053c-edf0-4ecd-8bda-5f726056f94d"
+      />
+      <meta
+         property="og:image"
+         content="https://td.byui.edu/TDPortal/BE/Logo/1/87"
+      />
+      <meta property="og:site_name" content="BYU Idaho" />
+      <title>OneStop Help Portal Home</title>
+      <script
+         src="https://static.quiq-cdn.com/chat-ui/shim-webchat-1.7-main-3.1.243-hotfix.1-70854f0d.js"
+         async=""
+         charset="UTF-8"
+      ></script>
+      <script
+         src="https://static.quiq-cdn.com/chat-ui/conversation-starter-3.1.243-hotfix.1-70854f0d.js"
+         async=""
+         charset="UTF-8"
+      ></script>
+      <link
+         href="https://static.quiq-cdn.com/chat-ui/styles/conversation-starter-3.1.243-hotfix.1-70854f0d.css"
+         rel="preload"
+         as="style"
+         crossorigin=""
+      />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+         rel="stylesheet"
+      />
+      <link
+         href="https://static.quiq-cdn.com/chat-ui/styles/conversation-starter-3.1.243-hotfix.1-70854f0d.css"
+         rel="stylesheet"
+         crossorigin=""
+      />
+      <script
+         id="Quiq_Webchat_Source_Main"
+         src="https://static.quiq-cdn.com/chat-ui/webchat-sdk-3.1.243-hotfix.1-70854f0d.js"
+         async=""
+         defer=""
+      ></script>
 
-                           <p style="text-align: center">
-                              <em><span style="font-size: 18px"><strong>OneStop is a place to ask questions, find
-                                       answers,
-                                       see FAQ and submit requests. You have a question?
-                                       We've got you covered!</strong></span></em>
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="desktop-module">
-                  <div id="208185" class="desktop-module panel panel-default no-border">
-                     <div class="ModuleContent">
-                        <div style="overflow: hidden">
-                           <p style="text-align: center">
-                              <em>Scroll for more options!&nbsp; &nbsp;</em> &nbsp;
-                              &nbsp;&nbsp;
-                           </p>
+      <style id="Quiq_InjectedStyle_-7ufhyb">
+         .quiq-notificationblurb-wrapper.quiq-id-quiq-webchat-1-7-default-widget
+            .quiq-notificationblurb-dismiss-button {
+            font-family: inherit;
+            background-color: #0076b6;
+         }
+      </style>
+      <style id="Quiq_InjectedStyle_-1y70au">
+         .quiq-notificationblurb-wrapper.quiq-id-quiq-webchat-1-7-default-widget
+            .quiq-notificationblurb-button {
+            color: #0076b6;
+            font-family: sans-serif;
+            border-color: #0076b6;
+         }
+      </style>
+      <style id="Quiq_InjectedStyle_-aosxok">
+         .quiq-notificationblurb-wrapper.quiq-id-quiq-webchat-1-7-default-widget
+            .quiq-notificationblurb-button:hover {
+            color: #ffffff;
+            background-color: #0076b6;
+         }
+      </style>
+      <link
+         rel="stylesheet"
+         href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CRaleway:600"
+         media="all"
+      />
+   </head>
+   <body data-new-gr-c-s-check-loaded="14.1057.0" data-gr-ext-installed="">
+      <form method="post" action="/TDClient/87/Portal/Home/" id="aspnetForm">
+         <div class="aspNetHidden">
+            <input
+               type="hidden"
+               name="__EVENTTARGET"
+               id="__EVENTTARGET"
+               value=""
+            />
+            <input
+               type="hidden"
+               name="__EVENTARGUMENT"
+               id="__EVENTARGUMENT"
+               value=""
+            />
+            <input
+               type="hidden"
+               name="__VIEWSTATE"
+               id="__VIEWSTATE"
+               value="ROgsGNOZquo+mzu8YjFYeODJh/ZW81LKHt3O7gwmSpHJ2Aj9l7SnSHfd85MXy0JBc2vCPkh8PUN476peUqJQ5nN5AFsnHJumvtEh520WGMoTiaBF15AfSqGXzm+6iyvt0aBEgGFeHtedx31QvpTxAvS5mpR0j9ldL9ouagguU6DvQLCfykDAAWt+BnQibesmm41RTh3ReLO2gIrmcGNzLRfLBuJWKLYmNb01BOTczDthk0KKspcpZrf+CSQ5jyi4hwrx0he6/kqN46VABQ+KcnPkMuVRre2TtPULPwUxAPdm/XmRUQCyHyUWaqJCQVUafZkaBxMvNurywxsUQWIxcx7l/62Jptvghp4H/q5K4zfdFjE5Ovdy1PA9IzKgmIiCha3M9bjyiWc3ChuPBWX4RJaGz22TvlAwMAzGgJKHaVVvC02pmgzEJAn7BylxdCMlmgXMQwUiWUXgwNJzGryveR3gVLKyIZHmqGdgIGNtqyC7TEappMkcddq1tT0VS8myI0mjq4CcsvrKYFn27kUvu+aNf2YFw5BGqEj8cC1CFPzB+M08IekevFxSwL7LBmc3zM/TRcLyboZdhUz8EIpwSs5T5c59UqaSYt6HQCI6J5PibjGGPnk3JccEdjtrY9WtxHrmji5lz0VL9QEImbYgtN0WHrkHGmPw5aMNDQjBv1C58BpfsQ9ey2O4Pc2U1dIxnFut0zYx0XEho9TW/+ZnE6CsgKErHozBBPEPvctzZqV9B/y9twHLz8AKdomX83JJMKiiw038Rjb0/WntAmgCZIKsJPdvQcLV7KDxtwDUUNExPjRlkYdN7J0bXVj83No9ZdSDuAc6YfFQXQofuAmc0/Ja5P+uDPiyly2BEpfIkcl4JSDEQD/M7ChI0RNKuxaGWGThdw=="
+            />
+         </div>
 
-                           <div class="table-responsive">
-                              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
-                           </div>
+         <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms["aspnetForm"];
+            if (!theForm) {
+               theForm = document.aspnetForm;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+               if (!theForm.onsubmit || theForm.onsubmit() != false) {
+                  theForm.__EVENTTARGET.value = eventTarget;
+                  theForm.__EVENTARGUMENT.value = eventArgument;
+                  theForm.submit();
+               }
+            }
+            //]]>
+         </script>
 
-                           <div class="table-responsive">
-                              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
-                           </div>
+         <script
+            href="https://td.byui.edu/TDClient/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZMSMQxVWLi4fik2rw1_u_hZsCNzwv5c621ov6_ZX_wzTt5vh-g2&amp;t=637729440413207958"
+            type="text/javascript"
+         ></script>
 
-                           <div class="table-responsive">
-                              <table class="table" style="width: 100%">
-                                 <tbody>
-                                    <tr>
-                                       <td>
-                                          <a href="https://byu-idaho.screenstepslive.com/s/17563"
-                                             style="border-bottom-style: none" target="_blank"><span
-                                                style="color: rgba(255, 255, 255, 1)"><img alt=""
-                                                   src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=e894233b-4bbb-4145-b1ab-c73e3cab102e.png"
-                                                   style="height: 162px; width: 150px" title="Help Guides" /></span></a>
-                                       </td>
-                                       <td>
-                                          <a href="https://td.byui.edu/TDClient/87/Portal/KB/"
-                                             style="border-bottom-style: none" target="_blank"><span
-                                                style="color: rgba(255, 255, 255, 1)"><img alt=""
-                                                   src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=d4f36e70-5c81-4ff0-9945-4486a837eacd.png"
-                                                   style="width: 150px; height: 162px"
-                                                   title="Search All Info" /></span></a>
-                                       </td>
-                                       <td>
-                                          <a href="https://td.byui.edu/TDClient/87/Portal/KB/?CategoryID=2362"
-                                             style="border-bottom-style: none" target="_blank"><span
-                                                style="color: rgba(255, 255, 255, 1)"><img alt=""
-                                                   src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=57616617-d6ad-48cd-87f1-bdfad243cc0d.png"
-                                                   style="
-                                      width: 147px;
-                                      float: left;
-                                      height: 162px;
-                                    " title="Student Wellness" /></span></a><a
-                                             href="https://td.byui.edu/TDClient/87/Portal/Forums/Questions/New?CategoryID=0"
-                                             style="border-bottom-style: none" target="_blank"><span
-                                                style="color: rgba(255, 255, 255, 1)"></span></a>
-                                       </td>
-                                       <td>
-                                          <a href="https://td.byui.edu/TDClient/87/Portal/KB/?CategoryID=2362"
-                                             style="border-bottom-style: none" target="_blank"><span
-                                                style="color: rgba(255, 255, 255, 1)"></span></a><a
-                                             href="https://td.byui.edu/TDClient/87/Portal/Questions"
-                                             target="_blank"><img alt=""
-                                                src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=15150256-438f-488b-8157-68c4066a1741.png"
-                                                style="width: 147px; height: 162px"
-                                                title="Questions for the Community" /></a>
-                                       </td>
-                                       <td>
-                                          <a href="https://www.byui.edu/covid-19-updates"
-                                             style="border-bottom-style: none" target="_blank"><span
-                                                style="color: rgba(255, 255, 255, 1)"><img alt=""
-                                                   src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=5fb746c1-b442-41c4-aebc-175d91d53d26.png"
-                                                   style="width: 150px; height: 162px"
-                                                   title="COVID-19 Updates" /></span></a>
-                                       </td>
-                                    </tr>
-                                 </tbody>
-                              </table>
-                           </div>
-                        </div>
+         <script
+            href="https://td.byui.edu/TDClient/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvmVxW3-Ljsg_2Hna32smxrg-6ogyYAN3UTPsJQ8m1uwzn_kuf2Wpne6NSFmYui3h0wCQhJN3ZUiLTNkvhiIgZpq74-lKmofUPQGJ8own8RI2_mwAcmvlSj2WBnqwm5Wj4cyNvv81&amp;t=ffffffffd202a464"
+            type="text/javascript"
+         ></script>
+         <script
+            href="https://td.byui.edu/TDClient/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OLdGoo5BVWQ_Eo60QZTEhEcHeiVfwgY9tLCgzdZ5TRwvrwYEnOvujbNccOVLUfWtUg4HivSIsewg6JABxkBGEqVVV64eiRyCAsPDqh6tUioISUQKB74sWMO4Er2mHrWEIWs_sBM1&amp;t=ffffffffd202a464"
+            type="text/javascript"
+         ></script>
+         <div class="aspNetHidden">
+            <input
+               type="hidden"
+               name="__VIEWSTATEGENERATOR"
+               id="__VIEWSTATEGENERATOR"
+               value="E1568E68"
+            />
+         </div>
+
+         <div
+            id="ctl00_upMain"
+            style="display: none"
+            role="status"
+            aria-hidden="true"
+         >
+            <div
+               id="ctl00_pbMain"
+               style="
+                  position: fixed;
+                  top: 50%;
+                  left: 0px;
+                  width: 100%;
+                  height: 1px;
+                  overflow: visible;
+                  z-index: 2000;
+                  display: block;
+               "
+            >
+               <div
+                  style="
+                     margin-left: -125px;
+                     position: fixed;
+                     top: 50%;
+                     left: 50%;
+                     width: 250px;
+                     height: 90px;
+                  "
+               >
+                  <div class="well shadow">
+                     <h2 class="h4 gutter-top-none">Updating...</h2>
+                     <div class="progress" style="margin-bottom: 0">
+                        <div
+                           class="progress-bar progress-bar-striped active"
+                           role="progressbar"
+                           aria-valuemin="0"
+                           aria-valuemax="100"
+                           style="width: 100%"
+                        ></div>
                      </div>
                   </div>
                </div>
             </div>
          </div>
-         <div class="row">
-            <div id="Column2" class="col-md-6 ui-sortable">
-               <div class="desktop-module">
-                  <div id="206483" class="desktop-module panel panel-default no-border">
-                     <div class="ModuleContent">
-                        <div style="overflow: hidden">
-                           <style type="text/css">
-                              .btn-primary {
-                                 transition-duration: 0.8s;
-                              }
 
-                              .btn-primary:hover {
-                                 box-shadow: inset 300px 0 0 0 #194793;
-                              }
+         <header role="banner">
+            <div
+               id="divMstrHeader"
+               class="master-header NoPrint"
+               style="background-color: #fff"
+            >
+               <div class="logo-header-full hidden-xs">
+                  <div class="pull-left">
+                     <a href="#mainContent" class="sr-only sr-only-focusable"
+                        >Skip to main content</a
+                     >
+                  </div>
 
-                              .btn-secondary {
-                                 transition-duration: 0.8s;
-                                 background: #b6f074;
-                              }
+                  <div
+                     id="ctl00_divPageHeader"
+                     class="container logo-header clearfix"
+                     style="padding: 5px"
+                  >
+                     <div id="divLogo" class="pull-left logo-container">
+                        <a href="http://www.byui.edu/" target="_blank">
+                           <img
+                              href="https://td.byui.edu/TDPortal/BE/Logo/1/87"
+                              alt="BYU Idaho Logo"
+                              class="js-logo img-responsive"
+                           />
+                        </a>
+                     </div>
 
-                              .btn-secondary:hover {
-                                 box-shadow: inset 300px 0 0 0 #6a9543;
-                              }
-                           </style>
-                           <div style="text-align: center">
-                              <a class="btn btn-primary btn-lg"
-                                 href="https://td.byui.edu/TDClient/87/Portal/Forums/Questions/?CategoryID=200022&amp;Filter=all"
-                                 role="button" style="
-                          font-size: 24px;
-                          color: white;
-                          width: 100%;
-                          margin: 0 0 5px;
-                        " target="_blank">Finances Questions</a>
-                           </div>
+                     <div
+                        class="master-header-right pull-right padding-top padding-bottom"
+                     >
+                        <div class="pull-left topLevelSearch input-group">
+                           <div
+                              id="SiteSearch-5022c2766da14a48a72fce5bc5426309"
+                              class="gutter-bottom input-group site-search"
+                              style="max-width: 400px"
+                           >
+                              <div
+                                 id="SiteSearch-dropdown-5022c2766da14a48a72fce5bc5426309"
+                                 class="input-group-btn"
+                              >
+                                 <button
+                                    type="button"
+                                    id="SiteSearch-filter-5022c2766da14a48a72fce5bc5426309"
+                                    class="btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    title="Filter your search by categories"
+                                    data-component="all"
+                                 >
+                                    <span class="fa fa-globe"></span
+                                    ><span
+                                       class="fa fa-fw fa-nopad fa-caret-down"
+                                       aria-hidden="true"
+                                    ></span>
+                                    <span class="sr-only">
+                                       Filter your search by category. Current
+                                       category:
+                                       <span class="js-current-component"
+                                          >All</span
+                                       >
+                                    </span>
+                                 </button>
+                                 <ul class="dropdown-menu">
+                                    <li>
+                                       <a
+                                          href="javascript:void(0);"
+                                          data-component-text="All"
+                                          data-component="all"
+                                          data-component-icon="fa-globe"
+                                          title="Search all areas"
+                                       >
+                                          <span
+                                             class="fa fa-fw fa-nopad fa-globe"
+                                             aria-hidden="true"
+                                          ></span>
+                                          All
+                                       </a>
+                                    </li>
 
-                           <div style="text-align: center">
-                              <a class="btn btn-primary btn-lg"
-                                 href="https://td.byui.edu/TDClient/87/Portal/Forums/Questions/?CategoryID=200023&amp;Filter=all"
-                                 role="button" style="
-                          font-size: 24px;
-                          color: white;
-                          width: 100%;
-                          margin: 0 0 5px;
-                        " target="_blank">Registration Questions</a>
-                           </div>
+                                    <li role="separator" class="divider"></li>
 
-                           <div style="text-align: center">
-                              <a class="btn btn-primary btn-lg" href="https://td.byui.edu/TDClient/87/Portal/Questions"
-                                 role="button" style="
-                          font-size: 24px;
-                          color: white;
-                          width: 100%;
-                          margin: 0 0 5px;
-                        " target="_blank">All Questions</a>
-                           </div>
+                                    <li role="presentation">
+                                       <a
+                                          role="menuitem"
+                                          href="javascript:void(0);"
+                                          data-component-text="Knowledge Base"
+                                          data-component="kb"
+                                          data-component-icon="fa-lightbulb-o"
+                                          title="Search Knowledge Base"
+                                       >
+                                          <span
+                                             class="fa fa-fw fa-nopad fa-lightbulb-o"
+                                             aria-hidden="true"
+                                          ></span>
+                                          Knowledge Base
+                                       </a>
+                                    </li>
 
-                           <div style="text-align: center">
-                              <a class="btn btn-secondary btn-lg"
-                                 href="https://td.byui.edu/TDClient/79/ITServicePortal/Home/?ToUrl=" role="button"
-                                 style="
-                          font-size: 24px;
-                          color: white;
-                          background: #80c140;
-                          width: 100%;
-                          margin: 0 0 5px;
-                        " target="_blank">Technology Support</a>
-                           </div>
+                                    <li role="presentation">
+                                       <a
+                                          role="menuitem"
+                                          href="javascript:void(0);"
+                                          data-component-text="Service Catalog"
+                                          data-component="sc"
+                                          data-component-icon="fa-compass"
+                                          title="Search Service Catalog"
+                                       >
+                                          <span
+                                             class="fa fa-fw fa-nopad fa-compass"
+                                             aria-hidden="true"
+                                          ></span>
+                                          Service Catalog
+                                       </a>
+                                    </li>
 
-                           <div style="text-align: center">
-                              <a class="btn btn-secondary btn-lg"
-                                 href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=9276" role="button"
-                                 style="
-                          font-size: 24px;
-                          color: white;
-                          background: #80c140;
-                          width: 100%;
-                          margin: 0 0 5px;
-                        " target="_blank">Tutoring and Advising</a>
-                           </div>
+                                    <li role="presentation">
+                                       <a
+                                          role="menuitem"
+                                          href="javascript:void(0);"
+                                          data-component-text="Questions"
+                                          data-component="q"
+                                          data-component-icon="fa-comments"
+                                          title="Search Questions"
+                                       >
+                                          <span
+                                             class="fa fa-fw fa-nopad fa-comments"
+                                             aria-hidden="true"
+                                          ></span>
+                                          Questions
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
 
-                           <div style="text-align: center">
-                              <a class="btn btn-secondary btn-lg"
-                                 href="https://td.byui.edu/TDClient/87/Portal/Requests/TicketRequests/NewForm?ID=ZF2Yb14z-Ro_"
-                                 role="button" style="
-                          font-size: 24px;
-                          color: white;
-                          background: #80c140;
-                          width: 100%;
-                          margin: 0 0 5px;
-                        " target="_blank">Submit a Request</a>
+                              <input
+                                 id="SiteSearch-text-5022c2766da14a48a72fce5bc5426309"
+                                 type="text"
+                                 class="form-control"
+                                 autocomplete="off"
+                                 placeholder="Search the client portal"
+                                 aria-label="Search the client portal"
+                                 title="To search for items with a specific tag, enter the # symbol followed by the name of the tag.
+   To search for items using exact match, place double quotes around your text."
+                              />
+
+                              <span class="input-group-btn">
+                                 <button
+                                    id="SiteSearch-button-5022c2766da14a48a72fce5bc5426309"
+                                    class="btn btn-default"
+                                    type="button"
+                                    title="Search"
+                                 >
+                                    <span
+                                       class="fa fa-fw fa-nopad fa-search blue"
+                                       aria-hidden="true"
+                                    ></span>
+                                    <span class="sr-only">Search</span>
+                                 </button>
+                              </span>
                            </div>
                         </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="desktop-module">
-                  <div id="201164" class="desktop-module panel panel-default">
-                     <div class="panel-heading clearfix">
-                        <h3 class="panel-title pull-left">Popular Articles</h3>
-                        <div class="pull-right"></div>
-                     </div>
-                     <div class="ModuleContent">
-                        <div id="ctl00_cpContent_ctl05_divContent">
-                           <div class="padding border-bottom font-md">
-                              <a href="/TDClient/87/Portal/KB/ArticleDet?ID=8243">Requesting an Exception to Register
-                                 for a Course</a>
-                           </div>
 
-                           <div class="padding border-bottom font-md">
-                              <a href="/TDClient/87/Portal/KB/ArticleDet?ID=6206">Textbooks</a>
-                           </div>
+                        <div class="dropdown pull-right">
+                           <button
+                              class="settings-button dropdown-toggle gutter-right-sm gutter-top-sm"
+                              type="button"
+                              data-toggle="dropdown"
+                              aria-expanded="false"
+                           >
+                              <span
+                                 class="fa fa-user padding-right-xs"
+                                 aria-hidden="true"
+                              ></span
+                              ><span class="sr-only">Profile menu for</span
+                              >Braden Hansen
+                           </button>
 
-                           <div class="padding border-bottom font-md">
-                              <a href="/TDClient/87/Portal/KB/ArticleDet?ID=6619">Printing Options</a>
-                           </div>
-
-                           <div class="padding border-bottom font-md">
-                              <a href="/TDClient/87/Portal/KB/ArticleDet?ID=8244">Student Finances FAQ</a>
-                           </div>
-
-                           <div class="padding border-bottom font-md">
-                              <a href="/TDClient/87/Portal/KB/ArticleDet?ID=8241">Can I change my Track Assignment?</a>
-                           </div>
-
-                           <div class="padding border-bottom font-md">
-                              <a href="/TDClient/87/Portal/KB/ArticleDet?ID=9276">Academic Success and Tutoring</a>
-                           </div>
-
-                           <div class="padding border-bottom font-md">
-                              <a href="/TDClient/87/Portal/KB/ArticleDet?ID=6204">Campus Services and Office Hours</a>
-                           </div>
-
-                           <div class="padding border-bottom font-md">
-                              <a href="/TDClient/87/Portal/KB/ArticleDet?ID=9487">Winter 2022 Semester Parking
-                                 Information</a>
-                           </div>
-
-                           <div class="padding border-bottom font-md">
-                              <a href="/TDClient/87/Portal/KB/ArticleDet?ID=6233">Returned Missionary Information</a>
-                           </div>
-
-                           <div class="padding border-bottom font-md">
-                              <a href="/TDClient/87/Portal/KB/ArticleDet?ID=9275">Counseling Center</a>
-                           </div>
-
-                           <span id="ctl00_cpContent_ctl05_lblResults_ctl00" aria-live="polite" aria-atomic="true"><span
-                                 id="ctl00_cpContent_ctl05_lblResults_lblResults-label" class="red"></span></span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div id="Column3" class="col-md-6 ui-sortable">
-               <div class="desktop-module">
-                  <div id="207311" class="desktop-module panel panel-default no-border">
-                     <div class="panel-heading clearfix">
-                        <h3 class="panel-title pull-left">Trending Questions</h3>
-                        <div class="pull-right"></div>
-                     </div>
-                     <div class="ModuleContent">
-                        <div style="overflow: hidden">
-                           <strong><span style="font-size: 16px"></span></strong>
-                           <h3>
-                              <span style="font-size: 14px"><span style="font-family: Arial"><span style="
-                              color: rgba(36, 36, 36, 1);
-                              font-family: 'Segoe UI', system-ui,
-                                'Apple Color Emoji', 'Segoe UI Emoji',
-                                sans-serif;
-                              font-size: 14px;
-                              font-style: normal;
-                              font-weight: 400;
-                              letter-spacing: normal;
-                              orphans: 2;
-                              text-indent: 0;
-                              text-transform: none;
-                              white-space: normal;
-                              widows: 2;
-                              word-spacing: 0;
-                              background-color: rgba(255, 255, 255, 1);
-                              display: inline !important;
-                              float: none;
-                            "></span></span></span><span style="font-size: 14px"><span style="font-family: Arial"><span
-                                       style="
-                              color: rgba(36, 36, 36, 1);
-                              font-family: 'Segoe UI', system-ui,
-                                'Apple Color Emoji', 'Segoe UI Emoji',
-                                sans-serif;
-                              font-style: normal;
-                              font-weight: 400;
-                              letter-spacing: normal;
-                              orphans: 2;
-                              text-indent: 0;
-                              text-transform: none;
-                              white-space: normal;
-                              widows: 2;
-                              word-spacing: 0;
-                              background-color: rgba(255, 255, 255, 1);
-                              float: none;
-                              display: inline !important;
-                            "></span></span></span><span style="font-family: Arial"><span style="font-size: 14px"><span
-                                       style="font-size: 14px"><strong><a
-                                             href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/100323">Deferment
-                                             Options</a><br />
-                                          <span style="color: rgba(0, 0, 0, 1)">Question:&nbsp;</span></strong><span
-                                          style="color: rgba(0, 0, 0, 1)">How do I get a deferment?<br />
-                                          <strong>Answer:&nbsp;</strong>For a list
-                                          of&nbsp;deferment options available as well as the
-                                          requirements for each, please refer to&nbsp;<a
-                                             href="https://www.byui.edu/admissions/deferments" target="_blank">Deferment
-                                             Options.</a><br />
-                                          <br />
-                                          <strong><a
-                                                href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/100939">Dropping
-                                                a class</a><br />
-                                             Question:</strong>&nbsp;How do I drop a class?<br />
-                                          <strong>Answer:</strong>&nbsp;You can refer
-                                          to&nbsp;<a
-                                             href="https://byui-help.screenstepslive.com/a/884683-how-to-withdraw-from-class"
-                                             target="_blank">How to Drop/Withdraw from Class</a>&nbsp;for a tutorial on
-                                          how to drop a class.
-                                          Depending on when you do that, there may be
-                                          different penalties. You can find all of the
-                                          important deadlines for dropping classes
-                                          at&nbsp;<a href="https://www.byui.edu/student-records/academic-deadlines"
-                                             target="_blank">Academic Deadlines</a>. Please keep in mind that there is
-                                          no tuition
-                                          refund for classes that are dropped after the
-                                          add/drop deadline<strong>.</strong><br />
-                                          <br />
-                                          <a href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/100315"><strong>Transcript
-                                                Evaluation Timeline</strong></a><br />
-                                          <strong>Question:&nbsp;</strong>How long does it
-                                          take for my transcripts to be evaluated?<br />
-                                          <strong>Answer:&nbsp;</strong>From the time that
-                                          you request your transcripts to be sent to
-                                          BYU–Idaho, it generally takes 2-4 weeks for the
-                                          admissions office to receive them. If all the
-                                          necessary steps have been completed, and BYU–Idaho
-                                          has received your transcripts, it typically takes
-                                          2-4 weeks for them to be reviewed and
-                                          processed.&nbsp;As soon as your transcripts are
-                                          reviewed and processed, the transfer evaluation
-                                          unit will send you a notification email to your
-                                          student email address.&nbsp;More information about
-                                          the steps that you need to complete as well as the
-                                          time line, can be found at&nbsp;<a
-                                             href="https://www.byui.edu/transfer-evaluation/timeline"
-                                             target="_blank">Guidelines.</a><br />
-                                          <br />
-                                          <strong><a
-                                                href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/100299">Tuition
-                                                Refund</a><br />
-                                             Question:&nbsp;</strong>How can I get a Tuition
-                                          Refund?&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;<br />
-                                          <strong>Answer:&nbsp;</strong>We invite you to
-                                          visit&nbsp;<a
-                                             href="https://www.byui.edu/financial-services/student-financials/payments-and-refunds/refunds/tuition-refund-policy"
-                                             target="_blank">Tuition Refund Policy</a>&nbsp;to
-                                          understand&nbsp;BYU-Idaho's tuition
-                                          refund
-                                          policy.&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;&ZeroWidthSpace;</span><br />
-                                       <br />
-                                       <strong><a href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/101158"
-                                             target="_blank">Student Charges</a><br />
-                                          <span style="color: rgba(0, 0, 0, 1)"></span><span
-                                             style="color: rgba(0, 0, 0, 1)">Question:&nbsp;</span></strong><span
-                                          style="color: rgba(0, 0, 0, 1)">What if I have questions about specific
-                                          charges
-                                          on my BYU-I account?</span></span></span></span><span
-                                 style="font-size: 14px"><span style="font-family: Arial"><span
-                                       style="color: rgba(0, 0, 0, 1)"><br />
-                                       <strong>Answer:&nbsp;</strong>You are able to view
-                                       your student charge history on your BYU-Idaho
-                                       account. Please refer to</span>&nbsp;<a
-                                       href="https://byu-idaho.screenstepslive.com/s/17563/a/1117296-how-to-view-charges-in-your-account"
-                                       rel="noopener noreferrer" target="_blank">How to View Charges in Your
-                                       Account</a><span style="color: rgba(0, 0, 0, 1)">&nbsp;for a walk-through&nbsp;on
-                                       how to view your
-                                       history.</span></span></span>
-                           </h3>
-
-                           <p>
-                              <span style="font-size: 14px"><span style="font-family: Arial"><span
-                                       style="color: rgba(0, 0, 0, 1)">If you still have questions after viewing your
-                                       history...</span></span></span>
-                           </p>
-
-                           <p>
-                              <span style="font-size: 14px"><span style="font-family: Arial"><span
-                                       style="color: rgba(0, 0, 0, 1)"></span></span></span>
-                           </p>
-
-                           <ul>
-                              <li>
-                                 <span style="font-size: 14px"><span style="color: rgba(0, 0, 0, 1)">University Store
-                                       Charges: you can refer to</span>&nbsp;<a
-                                       href="https://byu-idaho.screenstepslive.com/s/17563/a/1066228-how-to-view-university-store-charges-through-the-byu-idaho-website"
-                                       rel="noopener noreferrer" target="_blank">How to View University Store Charges
-                                       through the
-                                       BYU-Idaho Website</a><span style="color: rgba(0, 0, 0, 1)">&nbsp;for a
-                                       walk-through&nbsp;on how to view your
-                                       University Store receipt.</span></span>
+                           <ul
+                              class="dropdown-menu user-profile-menu"
+                              role="menu"
+                           >
+                              <li style="text-align: center; margin: auto">
+                                 <div
+                                    class="profile-image picture"
+                                    title="Braden Hansen"
+                                 >
+                                    <img
+                                       href="https://td.byui.edu/TDPortal/Images/Profile?fileName=14045A12-2D60-E911-910B-005056AC5EC6-637674917268204953.jpg"
+                                       alt="Braden Hansen"
+                                    />
+                                 </div>
                               </li>
-                              <li>
-                                 <span style="font-size: 14px"><span style="color: rgba(0, 0, 0, 1)">All other charges:
-                                       you can complete an</span>&nbsp;<a
-                                       href="https://td.byui.edu/TDClient/75/Portal/Requests/TicketRequests/NewForm?ID=707"
-                                       rel="noopener noreferrer" target="_blank">Account Specific Information
-                                       Request</a><span style="color: rgba(0, 0, 0, 1)">&nbsp;to receive clarification
-                                       from Accounting
-                                       Services about your student charges within one
-                                       business day</span>.</span><span style="font-size: 14px"></span>&nbsp;
+                              <li role="menuitem">
+                                 <a
+                                    href="https://td.byui.edu/TDClient/87/Portal/People/Details?ID=14045a12-2d60-e911-910b-005056ac5ec6"
+                                    class="black"
+                                    >My Profile</a
+                                 >
+                              </li>
+
+                              <li role="menuitem">
+                                 <a
+                                    href="https://td.byui.edu/TDClient/87/Portal/People/Views"
+                                    class="black"
+                                    >Profile Views</a
+                                 >
+                              </li>
+
+                              <li role="separator" class="divider"></li>
+
+                              <li role="menuitem">
+                                 <a
+                                    href="https://td.byui.edu/TDAdmin/Home/Default.aspx?IsInTab=0"
+                                    target="_blank"
+                                    class="black"
+                                    >Admin</a
+                                 >
+                              </li>
+
+                              <li role="menuitem">
+                                 <a
+                                    href="https://td.byui.edu/TDNext/Home/Desktop/Default.aspx"
+                                    target="_blank"
+                                    class="black"
+                                    >TDNext</a
+                                 >
+                              </li>
+
+                              <li class="dropdown-submenu">
+                                 <a href="javascript:;" data-toggle="dropdown"
+                                    >Switch Portals</a
+                                 >
+                                 <ul
+                                    class="dropdown-menu pull-right dropdown-scroll"
+                                    data-dropdown-scroll-height-offset="240px"
+                                    style="
+                                       overflow-y: auto;
+                                       min-height: 38px;
+                                       max-height: calc((100vh - 63px) - 240px);
+                                    "
+                                 >
+                                    <li>
+                                       <a
+                                          href="https://td.byui.edu/TDClient/78/Portal/Home/"
+                                          >BSC Portal</a
+                                       >
+                                    </li>
+
+                                    <li>
+                                       <a
+                                          href="https://td.byui.edu/TDClient/75/Portal/Home/"
+                                          >Client Portal</a
+                                       >
+                                    </li>
+
+                                    <li>
+                                       <a
+                                          href="https://td.byui.edu/TDClient/79/ITServicePortal/Home/"
+                                          >IT Services</a
+                                       >
+                                    </li>
+                                 </ul>
+                              </li>
+
+                              <li role="separator" class="divider"></li>
+                              <li role="menuitem">
+                                 <a
+                                    href="https://td.byui.edu/TDClient/87/Portal/Logout.aspx"
+                                    class="black"
+                                    >Sign Out</a
+                                 >
                               </li>
                            </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
 
-                           <h3>
-                              <span style="font-size: 14px"><span style="font-family: Arial"><br />
-                                    <strong><a
-                                          href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/100930">Payments</a></strong></span></span>
-                           </h3>
-                           <span style="font-size: 14px"><strong>Question:&nbsp;</strong>Is there a way that I can
-                              do monthly payments for my tuition?&nbsp;<br />
-                              <strong>Answer:&nbsp;</strong>You can set up a Payment
-                              Plan to make monthly payments and prevent your debts from
-                              being sent to a Collections Agency (a Payment Plan will
-                              NOT prevent you from getting the additional 1% late fee
-                              every month). Complete the&nbsp;<a
-                                 href="https://td.byui.edu/TDClient/87/Portal/Requests/ServiceDet?ID=920"
-                                 target="_blank">Payment Plan Request</a>&nbsp;to set one up.</span><br />
-                           &nbsp;
-                           <h3>
-                              <span style="font-size: 14px"><span style="font-family: Arial"><strong><a
-                                          href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/101087">Tax
-                                          form</a></strong></span></span>
-                           </h3>
+               <nav
+                  id="ctl00_mainNav"
+                  class="navbar navbar-default themed tdbar"
+                  aria-label="Primary"
+               >
+                  <div id="navContainer" class="container">
+                     <div class="navbar-header">
+                        <button
+                           type="button"
+                           class="pull-left navbar-toggle collapsed themed tdbar-button-anchored tdbar-toggle gutter-left"
+                           data-toggle="collapse"
+                           data-target=".navbar-collapse"
+                        >
+                           <span class="tdbar-button-anchored icon-bar"></span>
+                           <span class="tdbar-button-anchored icon-bar"></span>
+                           <span class="tdbar-button-anchored icon-bar"></span>
+                           <span class="sr-only">Show Applications Menu</span>
+                        </button>
+                        <a
+                           class="navbar-brand hidden-sm hidden-md hidden-lg themed tdbar-button-anchored truncate-be"
+                           href="#"
+                        >
+                           OneStop Help Portal
+                        </a>
+                     </div>
 
-                           <h3>
-                              <span style="font-size: 14px"><span style="font-family: Arial"><span
-                                       style="color: rgba(0, 0, 0, 1)"><strong>Question:</strong>&nbsp;How do I get my
-                                       tax
-                                       forms?</span></span></span><br />
-                              <span style="font-size: 14px"><span style="font-family: Arial"><span
-                                       style="color: rgba(0, 0, 0, 1)"><strong>Answer:</strong>&nbsp;If you are a
-                                       student
-                                       looking for your 1098-T that&nbsp;provides
-                                       information about&nbsp;educational
-                                       expenses&nbsp;that may qualify you for
-                                       education-related tax credits, see</span>&nbsp;<a
-                                       href="http://byu-idaho.screenstepslive.com/s/17563/m/68615/l/962268-how-can-i-get-my-1098-t-form"
-                                       rel="noopener noreferrer" target="_blank">How can I get my 1098-T
-                                       Form?</a>.</span></span><br />
-                              <span style="font-size: 14px"><span style="font-family: Arial"><span
-                                       style="color: rgba(0, 0, 0, 1)">If you are an employee looking for your W-2 tax
-                                       forms that are payroll related, see</span>&nbsp;<a
-                                       href="https://byu-idaho.screenstepslive.com/s/17563/m/96524/l/1363551-how-can-i-view-print-my-w-2-online"
-                                       rel="noopener noreferrer" target="_blank">How can I view/print my W-2
-                                       online?</a></span></span><br />
-                              <span style="font-size: 14px"><span style="font-family: Arial"><span
-                                       style="color: rgba(0, 0, 0, 1)">If you are a Canadian student looking for your
-                                       TL11A (which is similar to the 1098-T form),
-                                       see</span>&nbsp;<a
-                                       href="http://byu-idaho.screenstepslive.com/s/17563/m/68615/l/962281-how-can-i-reqest-a-tl11a-canadian-tax-form"
-                                       rel="noopener noreferrer" target="_blank">How can I request a TL11A (Canadian Tax
-                                       Form)?</a></span></span>
-                           </h3>
-                           <span style="font-size: 14px"></span><br />
-                           <span style="font-size: 14px"><span style="font-family: Arial"><a
-                                    href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/101001"><strong>Advisor
-                                       Appointment</strong></a></span></span><br />
-                           <span style="font-size: 14px"><strong>Question:</strong>&nbsp;How do I schedule an
-                              academic advising appointment?</span><br />
-                           <span style="font-size: 14px"><strong>Answer:&nbsp;</strong>If you are a campus student
-                              or an online student in a major from 2017 or before, our
-                              contact center agents would be happy to set up an academic
-                              advising appointment for you! Please&nbsp;<a href="https://www.byui.edu/contact-us/"
-                                 target="_blank">contact us&nbsp;</a>by text, phone, or chat to schedule an appointment
-                              with
-                              an Academic Advisor.<br />
-                              You can also set your up your own appointment by following
-                              the step by step walk through, see&nbsp;<a
-                                 href="https://www.byui.edu/iplan/beta/tutorials/advising-schedule-an-appointment"
-                                 target="_blank">Advising - Schedule an Appointment</a>.<br />
-                              For online students in a major after 2017 please fill out
-                              the&nbsp;<a href="https://byui.az1.qualtrics.com/jfe/form/SV_3PE8EE0yR8m2rVb"
-                                 target="_blank">BYU-Pathway Advising Form</a></span><br />
-                           &nbsp;
-                           <h3>
-                              <span style="font-size: 14px"><span style="font-family: Arial"></span></span>
-                           </h3>
+                     <div
+                        id="td-navbar-collapse"
+                        class="collapse navbar-collapse"
+                     >
+                        <ul
+                           class="nav navbar-nav nav-collapsing"
+                           id="collapseMe"
+                        >
+                           <li
+                              id="divSearch"
+                              class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"
+                              style=""
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/Shared/Search"
+                                 title="search"
+                                 >Search</a
+                              >
+                           </li>
+                           <li
+                              id="divProfile"
+                              class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"
+                              style=""
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/People/Details?ID=14045a12-2d60-e911-910b-005056ac5ec6"
+                                 >My Profile</a
+                              >
+                           </li>
+                           <li
+                              id="divDesktop2bb2053c-edf0-4ecd-8bda-5f726056f94d"
+                              class="themed tdbar-button-anchored active"
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/Home/"
+                                 >Home</a
+                              >
+                           </li>
+                           <li
+                              class="tdbar-sub-mobile hidden-sm hidden-md hidden-lg"
+                              style=""
+                           >
+                              <ul class="nav-collapsing"></ul>
+                           </li>
+                           <li
+                              id="divDesktop66237ad8-7a61-496a-927d-3aaa59a6a421"
+                              class="themed tdbar-button-anchored"
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/Home/?ID=66237ad8-7a61-496a-927d-3aaa59a6a421"
+                                 >Contact Us
+                              </a>
+                           </li>
+                           <li
+                              id="divDesktop24146e2e-af29-4088-b5ff-b645aad08bb3"
+                              class="themed tdbar-button-anchored"
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/Home/?ID=24146e2e-af29-4088-b5ff-b645aad08bb3"
+                                 >Popular Articles</a
+                              >
+                           </li>
+                           <li
+                              id="divTDProjects"
+                              class="themed tdbar-button-anchored"
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/Projects/"
+                                 >Projects/Workspaces</a
+                              >
+                           </li>
+                           <li
+                              id="divTDRequests"
+                              class="themed tdbar-button-anchored sr-focusable"
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/Requests/ServiceCatalog"
+                                 >Services</a
+                              >
+                           </li>
+                           <li
+                              id="divTDKnowledgeBase"
+                              class="themed tdbar-button-anchored sr-focusable"
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/KB/"
+                                 >Knowledge Base</a
+                              >
+                           </li>
+                           <li
+                              id="divTDQuestions"
+                              class="themed tdbar-button-anchored sr-focusable"
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/Questions"
+                                 >Questions</a
+                              >
+                           </li>
+                           <li
+                              id="divReports"
+                              class="themed tdbar-button-anchored"
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/Reports/"
+                                 >Reports</a
+                              >
+                           </li>
+                           <li
+                              id="divSignout"
+                              class="themed tdbar-button-anchored hidden-sm hidden-md hidden-lg"
+                              style=""
+                           >
+                              <a
+                                 href="https://td.byui.edu/TDClient/87/Portal/Logout.aspx"
+                                 >Sign Out</a
+                              >
+                           </li>
+                           <li
+                              class="themed tdbar-button-anchored hidden-xs more-items-button hidden-important"
+                              id="moreMenu"
+                           >
+                              <a
+                                 data-toggle="dropdown"
+                                 title="More Applications"
+                                 href="javascript:;"
+                              >
+                                 <span class="sr-only">More Applications</span>
+                                 <span
+                                    class="fa fa-ellipsis-h"
+                                    aria-hidden="true"
+                                 ></span>
+                              </a>
+                              <ul
+                                 class="dropdown-menu dropdown-menu-right themed tdbar"
+                                 id="collapsed"
+                              ></ul>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </nav>
+            </div>
+         </header>
 
-                           <h3>
-                              <span style="font-family: Arial"><span style="font-size: 14px"><strong><a
-                                          href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/101096">Edit
-                                          personal information</a></strong></span></span>
-                           </h3>
+         <div
+            id="navShim"
+            class="hidden-xs hidden-sm"
+            style="padding-top: 139px"
+         ></div>
+         <main role="main">
+            <div id="content" style="padding-top: 139px; margin-top: -139px">
+               <div id="mainContent" tabindex="-1"></div>
 
-                           <h3>
-                              <span style="font-size: 18px"><span style="font-family: Arial"></span></span>
-                           </h3>
-                           <span style="font-size: 14px">
-                              <span style="color: rgba(0, 0, 0, 1)"> </span></span>
+               <div class="container gutter-top gutter-bottom-lg">
+                  <span id="ctl00_cpContent_lblResults" class="red"></span>
 
-                           <h3>
-                              <span style="font-size: 14px"><span style="font-family: Arial"><span
-                                       style="color: rgba(0, 0, 0, 1)">
-                                       <strong>Question:&nbsp;</strong>How do i change my
-                                       Display name on my portal?<br />
-                                       <strong>Answer:&nbsp;</strong>You can find the
-                                       option to change your name under 'profile' on your
-                                       old myBYU-I homepage. You can refer to&nbsp;</span><a
-                                       href="https://byu-idaho.screenstepslive.com/s/17563/a/1041958-demographic-information-change"
-                                       rel="noopener noreferrer" target="_blank">Demographic Information Change</a><span
-                                       style="color: rgba(0, 0, 0, 1)">&nbsp;for a step-by-step tutorial. If
-                                       you&nbsp;are
-                                       a BYU-Pathway Online student, you will need to
-                                       contact BYU-Pathway Support for assistance. You can
-                                       reach them by selecting the BYU-Pathway Support live
-                                       chat option at the bottom right of the&nbsp;</span><a
-                                       href="https://www.byupathway.org/help" rel="noopener noreferrer"
-                                       target="_blank">BYU-Pathway help page</a><span
-                                       style="color: rgba(0, 0, 0, 1)">.</span></span></span>
-                           </h3>
+                  <div class="row">
+                     <div id="Column1" class="col-md-12 ui-sortable">
+                        <div class="desktop-module">
+                           <div
+                              id="201162"
+                              class="desktop-module panel panel-default no-border"
+                           >
+                              <div class="ModuleContent">
+                                 <div style="overflow: hidden">
+                                    <p>&nbsp;</p>
 
-                           <div class="gutter-bottom-sm question-body CKEditorSuppressMargin wrap-text">
-                              <div class="gutter-bottom-sm">
-                                 <div class="gutter-bottom-sm question-body CKEditorSuppressMargin wrap-text">
-                                    <h3 class="gutter-bottom-sm">&nbsp;</h3>
+                                    <p>
+                                       <img
+                                          alt=""
+                                          src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=6bbb12f0-c5e2-4169-8202-050c17e17974.jpeg"
+                                          style="width: 1200px; height: 281px"
+                                       />
+                                    </p>
 
-                                    <div class="gutter-bottom-sm question-body CKEditorSuppressMargin wrap-text">
-                                       <div class="gutter-bottom-sm question-body CKEditorSuppressMargin wrap-text">
-                                          <h3 class="gutter-bottom-sm question-body CKEditorSuppressMargin wrap-text">
-                                             <small><big><span style="color: rgba(0, 0, 0, 1)"><span
-                                                         style="font-size: 14px"><span
-                                                            style="font-family: Arial"></span></span></span></big></small>
-                                          </h3>
-                                       </div>
+                                    <p style="text-align: center">
+                                       <em
+                                          ><span style="font-size: 18px"
+                                             ><strong
+                                                >OneStop is a place to ask
+                                                questions, find answers, see FAQ
+                                                and submit requests. You have a
+                                                question? We've got you
+                                                covered!</strong
+                                             ></span
+                                          ></em
+                                       >
+                                    </p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="desktop-module">
+                           <div
+                              id="208185"
+                              class="desktop-module panel panel-default no-border"
+                           >
+                              <div class="ModuleContent">
+                                 <div style="overflow: hidden">
+                                    <p style="text-align: center">
+                                       <em
+                                          >Scroll for more options!&nbsp;
+                                          &nbsp;</em
+                                       >
+                                       &nbsp; &nbsp;
+                                    </p>
+
+                                    <div class="table-responsive">
+                                       <table class="table" style="width: 100%">
+                                          <tbody>
+                                             <tr>
+                                                <td style="text-align: center">
+                                                   <a
+                                                      href="https://byui-help.screenstepslive.com/?utm_source=onestop_homepage"
+                                                      style="
+                                                         border-bottom-style: none;
+                                                      "
+                                                      target="_blank"
+                                                      ><img
+                                                         alt=""
+                                                         src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=7c5da9e6-1df1-4d91-8581-993c6642a906.png"
+                                                         style="
+                                                            height: 164px;
+                                                            width: 150px;
+                                                         "
+                                                         title="Help Guides &amp; Tutorials"
+                                                   /></a>
+                                                </td>
+                                                <td style="text-align: center">
+                                                   <a
+                                                      href="https://td.byui.edu/TDClient/87/Portal/KB/"
+                                                      style="
+                                                         border-bottom-style: none;
+                                                      "
+                                                      target="_blank"
+                                                      ><img
+                                                         alt=""
+                                                         src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=183eb2a0-8006-4ede-9970-e948dab998f4.png"
+                                                         style="
+                                                            width: 150px;
+                                                            height: 169px;
+                                                         "
+                                                         title="Search All Information"
+                                                   /></a>
+                                                </td>
+                                                <td style="text-align: center">
+                                                   <a
+                                                      href="https://td.byui.edu/TDClient/87/Portal/KB/?CategoryID=2362"
+                                                      style="
+                                                         border-bottom-style: none;
+                                                      "
+                                                      target="_blank"
+                                                      ><img
+                                                         alt=""
+                                                         src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=0da32989-b876-48de-adc5-acb89b018032.png"
+                                                         style="
+                                                            width: 160px;
+                                                            height: 168px;
+                                                         "
+                                                         title="Student Wellness"
+                                                   /></a>
+                                                </td>
+                                                <td style="text-align: center">
+                                                   <a
+                                                      href="https://td.byui.edu/TDClient/87/Portal/Questions/New?CategoryID=200013"
+                                                      style="
+                                                         border-bottom-style: none;
+                                                      "
+                                                      target="_blank"
+                                                      ><img
+                                                         alt=""
+                                                         src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=fdfa97c0-64d9-481c-821d-07221af121b7.png"
+                                                         style="
+                                                            width: 160px;
+                                                            height: 168px;
+                                                            border-bottom-style: none;
+                                                         "
+                                                         title="Ask a Community Question"
+                                                   /></a>
+                                                </td>
+                                                <td style="text-align: center">
+                                                   <a
+                                                      href="https://td.byui.edu/TDClient/87/Portal/Requests/TicketRequests/NewForm?ID=ZF2Yb14z-Ro_&amp;RequestorType=Service"
+                                                      style="
+                                                         border-bottom-style: none;
+                                                      "
+                                                      target="_blank"
+                                                      ><span
+                                                         style="
+                                                            color: rgba(
+                                                               255,
+                                                               255,
+                                                               255,
+                                                               1
+                                                            );
+                                                         "
+                                                         ><img
+                                                            alt=""
+                                                            src="https://td.byui.edu/TDPortal/Images/Viewer?fileName=0b16cae5-655b-4867-8785-0cb2a0dc03f2.png"
+                                                            style="
+                                                               width: 173px;
+                                                               height: 168px;
+                                                            "
+                                                            title="Submit a Personal Request" /></span
+                                                   ></a>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
                                     </div>
                                  </div>
                               </div>
                            </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div id="Column2" class="col-md-6 ui-sortable">
+                        <div class="desktop-module">
+                           <div
+                              id="206483"
+                              class="desktop-module panel panel-default no-border"
+                           >
+                              <div class="ModuleContent">
+                                 <div style="overflow: hidden">
+                                    <style type="text/css">
+                                       .btn-primary:hover {
+                                          background: #194793;
+                                       }
+                                       .btn-secondary:hover {
+                                          background: #6a9543;
+                                       }
+                                       .btn-danger {
+                                          background: #f16262;
+                                       }
+                                       .btn-danger:hover {
+                                          background: #cf3434;
+                                       }
+                                    </style>
+                                    <div style="text-align: center">
+                                       <a
+                                          class="btn btn-primary btn-lg"
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/?CategoryID=2358"
+                                          role="button"
+                                          style="
+                                             font-size: 24px;
+                                             color: white;
+                                             width: 100%;
+                                             margin: 0 0 5px;
+                                          "
+                                          target="_blank"
+                                          >Admissions</a
+                                       >
+                                    </div>
 
-                           <h3>
-                              <small><big><span style="font-size: 14px"><span style="font-family: Arial"><a
-                                             href="https://td.byui.edu/TDClient/87/Portal/Forums/Questions/?Filter=all"
-                                             target="_blank">See All Recent
-                                             Questions</a></span></span></big></small><strong><span
-                                    style="font-size: 16px"><span style="font-size: 14px"></span></span></strong>
-                           </h3>
+                                    <div style="text-align: center">
+                                       <a
+                                          class="btn btn-primary btn-lg"
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/?CategoryID=2356"
+                                          role="button"
+                                          style="
+                                             font-size: 24px;
+                                             color: white;
+                                             width: 100%;
+                                             margin: 0 0 5px;
+                                          "
+                                          target="_blank"
+                                          >Finances</a
+                                       >
+                                    </div>
+
+                                    <div style="text-align: center">
+                                       <a
+                                          class="btn btn-primary btn-lg"
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/?CategoryID=2357"
+                                          role="button"
+                                          style="
+                                             font-size: 24px;
+                                             color: white;
+                                             width: 100%;
+                                             margin: 0 0 5px;
+                                          "
+                                          target="_blank"
+                                          >Registration</a
+                                       >
+                                    </div>
+
+                                    <div style="text-align: center">
+                                       <a
+                                          class="btn btn-primary btn-lg"
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/"
+                                          role="button"
+                                          style="
+                                             font-size: 24px;
+                                             color: white;
+                                             width: 100%;
+                                             margin: 0 0 5px;
+                                          "
+                                          target="_blank"
+                                          >Student &amp; Employee Wellness</a
+                                       >
+                                    </div>
+
+                                    <div style="text-align: center">
+                                       <a
+                                          class="btn btn-primary btn-lg"
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/?CategoryID=2360"
+                                          role="button"
+                                          style="
+                                             font-size: 24px;
+                                             color: white;
+                                             width: 100%;
+                                             margin: 0 0 5px;
+                                          "
+                                          target="_blank"
+                                          >Technology Support</a
+                                       >
+                                    </div>
+
+                                    <div style="text-align: center">
+                                       <a
+                                          class="btn btn-primary btn-lg"
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=9276"
+                                          role="button"
+                                          style="
+                                             font-size: 24px;
+                                             color: white;
+                                             width: 100%;
+                                             margin: 0 0 5px;
+                                          "
+                                          target="_blank"
+                                          >Tutoring and Advising</a
+                                       >
+                                    </div>
+
+                                    <div style="text-align: center">
+                                       <a
+                                          class="btn btn-primary btn-lg"
+                                          href="https://td.byui.edu/TDClient/87/Portal/Questions"
+                                          role="button"
+                                          style="
+                                             font-size: 24px;
+                                             color: white;
+                                             width: 100%;
+                                             margin: 0 0 5px;
+                                          "
+                                          target="_blank"
+                                          >See Recent Questions</a
+                                       >
+                                    </div>
+
+                                    <div style="text-align: center">
+                                       <a
+                                          class="btn btn-danger btn-lg"
+                                          href="https://www.byui.edu/covid-19-updates"
+                                          role="button"
+                                          style="
+                                             font-size: 24px;
+                                             color: white;
+                                             width: 100%;
+                                             margin: 0 0 5px;
+                                          "
+                                          target="_blank"
+                                          >Covid 19 Updates</a
+                                       >
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="desktop-module">
+                           <div
+                              id="201164"
+                              class="desktop-module panel panel-default"
+                           >
+                              <div class="panel-heading clearfix">
+                                 <h3 class="panel-title pull-left">
+                                    Popular Articles
+                                 </h3>
+                                 <div class="pull-right"></div>
+                              </div>
+                              <div class="ModuleContent">
+                                 <div id="ctl00_cpContent_ctl05_divContent">
+                                    <div class="padding border-bottom font-md">
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=8243"
+                                          >Requesting an Exception to Register
+                                          for a Course</a
+                                       >
+                                    </div>
+
+                                    <div class="padding border-bottom font-md">
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=8244"
+                                          >Student Finances FAQ</a
+                                       >
+                                    </div>
+
+                                    <div class="padding border-bottom font-md">
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=6206"
+                                          >Textbooks</a
+                                       >
+                                    </div>
+
+                                    <div class="padding border-bottom font-md">
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=6619"
+                                          >Using Printers On Campus</a
+                                       >
+                                    </div>
+
+                                    <div class="padding border-bottom font-md">
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=8242"
+                                          >Dropping Classes or Leaving School</a
+                                       >
+                                    </div>
+
+                                    <div class="padding border-bottom font-md">
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=8241"
+                                          >Can I change my Track Assignment?</a
+                                       >
+                                    </div>
+
+                                    <div class="padding border-bottom font-md">
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=6223"
+                                          >Registration for Spring 2022</a
+                                       >
+                                    </div>
+
+                                    <div class="padding border-bottom font-md">
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=8393"
+                                          >Graduation Spring 2022</a
+                                       >
+                                    </div>
+
+                                    <div class="padding border-bottom font-md">
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=10278"
+                                          >Deferments and Overrides</a
+                                       >
+                                    </div>
+
+                                    <div class="padding border-bottom font-md">
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/KB/ArticleDet?ID=8652"
+                                          >Technology Support Resources</a
+                                       >
+                                    </div>
+
+                                    <span
+                                       id="ctl00_cpContent_ctl05_lblResults_ctl00"
+                                       aria-live="polite"
+                                       aria-atomic="true"
+                                       ><span
+                                          id="ctl00_cpContent_ctl05_lblResults_lblResults-label"
+                                          class="red"
+                                       ></span
+                                    ></span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="Column3" class="col-md-6 ui-sortable">
+                        <div class="desktop-module">
+                           <div
+                              id="207311"
+                              class="desktop-module panel panel-default no-border"
+                           >
+                              <div class="panel-heading clearfix">
+                                 <h3 class="panel-title pull-left">
+                                    Trending Questions
+                                 </h3>
+                                 <div class="pull-right"></div>
+                              </div>
+                              <div class="ModuleContent">
+                                 <div style="overflow: hidden">
+                                    <strong
+                                       ><span style="font-size: 16px"></span
+                                    ></strong>
+                                    <h3>
+                                       <span style="font-size: 14px"
+                                          ><span style="font-family: Arial"
+                                             ><span
+                                                style="
+                                                   color: rgba(36, 36, 36, 1);
+                                                   font-family: 'Segoe UI',
+                                                      system-ui,
+                                                      'Apple Color Emoji',
+                                                      'Segoe UI Emoji',
+                                                      sans-serif;
+                                                   font-size: 14px;
+                                                   font-style: normal;
+                                                   font-weight: 400;
+                                                   letter-spacing: normal;
+                                                   orphans: 2;
+                                                   text-indent: 0;
+                                                   text-transform: none;
+                                                   white-space: normal;
+                                                   widows: 2;
+                                                   word-spacing: 0;
+                                                   background-color: rgba(
+                                                      255,
+                                                      255,
+                                                      255,
+                                                      1
+                                                   );
+                                                   display: inline !important;
+                                                   float: none;
+                                                "
+                                             ></span></span></span
+                                       ><span style="font-size: 14px"
+                                          ><span style="font-family: Arial"
+                                             ><span
+                                                style="
+                                                   color: rgba(36, 36, 36, 1);
+                                                   font-family: 'Segoe UI',
+                                                      system-ui,
+                                                      'Apple Color Emoji',
+                                                      'Segoe UI Emoji',
+                                                      sans-serif;
+                                                   font-style: normal;
+                                                   font-weight: 400;
+                                                   letter-spacing: normal;
+                                                   orphans: 2;
+                                                   text-indent: 0;
+                                                   text-transform: none;
+                                                   white-space: normal;
+                                                   widows: 2;
+                                                   word-spacing: 0;
+                                                   background-color: rgba(
+                                                      255,
+                                                      255,
+                                                      255,
+                                                      1
+                                                   );
+                                                   float: none;
+                                                   display: inline !important;
+                                                "
+                                             ></span></span></span
+                                       ><span style="font-family: Arial"
+                                          ><span style="font-size: 14px"
+                                             ><span
+                                                style="font-size: 14px"
+                                             ></span></span
+                                       ></span>
+                                    </h3>
+
+                                    <h3>
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/101087"
+                                          target="_blank"
+                                          ><span style="font-size: 14px"
+                                             ><span
+                                                style="font-family: Arial"
+                                             ></span></span></a
+                                       ><span style="font-size: 14px"
+                                          ><span style="font-family: Arial"
+                                             ><span
+                                                style="font-size: 14px"
+                                             ></span></span
+                                       ></span>
+                                    </h3>
+
+                                    <h3>
+                                       <a
+                                          href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/101087"
+                                          target="_blank"
+                                          ><span style="font-size: 14px"
+                                             ><span
+                                                style="font-family: Arial"
+                                             ></span></span
+                                       ></a>
+                                    </h3>
+
+                                    <div>
+                                       <span style="font-size: 14px"
+                                          ><span style="font-family: Arial"
+                                             ><strong
+                                                ><a
+                                                   href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/101235"
+                                                   target="_blank"
+                                                   >Financial Aid Email</a
+                                                ></strong
+                                             ></span
+                                          ></span
+                                       ><br />
+                                       <span style="color: rgba(0, 0, 0, 1)"
+                                          ><span
+                                             style="font-size: 14px"
+                                          ></span></span
+                                       ><span style="color: rgba(0, 0, 0, 1)"
+                                          ><span style="font-size: 14px"
+                                             ><strong>Question:&nbsp;</strong
+                                             >Hello! I received an email from
+                                             accounting to remind me to pay
+                                             tuition. But I also received an
+                                             email from Financial Aid about
+                                             technical issues. I'm a little
+                                             confused on what to do.</span
+                                          ><span
+                                             style="font-size: 14px"
+                                          ></span></span
+                                       ><br />
+                                       <span style="font-size: 14px"
+                                          ><span style="color: rgba(0, 0, 0, 1)"
+                                             ><strong>Answer:&nbsp;</strong>That
+                                             is a great question!&nbsp;Please
+                                             follow the steps on the Financial
+                                             Aid email, it contains important
+                                             information that you will need to
+                                             follow. The Federal Financial Aid
+                                             should be posted on
+                                             your&nbsp;BYUI&nbsp;account on
+                                             Wednesday, if you attended Winter
+                                             2022, and any remaining balance
+                                             should go through</span
+                                          >&nbsp;<a
+                                             href="http://td.byui.edu/TDClient/87/Portal/Questions/Details/101272"
+                                             rel="noopener noreferrer"
+                                             target="_blank"
+                                             >E-refund</a
+                                          >&nbsp;<span
+                                             style="color: rgba(0, 0, 0, 1)"
+                                             >in the following
+                                             days.&nbsp;Please</span
+                                          >&nbsp;<a
+                                             href="https://www.byui.edu/contact-us/"
+                                             rel="noopener noreferrer"
+                                             target="_blank"
+                                             >contact us</a
+                                          >&nbsp;<span
+                                             style="color: rgba(0, 0, 0, 1)"
+                                             >if you have further
+                                             questions.</span
+                                          ><span style="color: rgba(0, 0, 0, 1)"
+                                             ><br />
+                                             <br />
+                                             <span style="font-size: 14px"
+                                                ><span
+                                                   style="
+                                                      color: rgba(0, 0, 0, 1);
+                                                   "
+                                                   ><strong
+                                                      ><a
+                                                         href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/101001"
+                                                         target="_blank"
+                                                         >Advisor Appointment</a
+                                                      ></strong
+                                                   ><span
+                                                      style="font-size: 14px"
+                                                      ><span
+                                                         style="
+                                                            color: rgba(
+                                                               0,
+                                                               0,
+                                                               0,
+                                                               1
+                                                            );
+                                                         "
+                                                         ><span
+                                                            style="
+                                                               font-size: 14px;
+                                                            "
+                                                            ><span
+                                                               style="
+                                                                  font-family: Arial;
+                                                               "
+                                                            ></span></span></span></span></span></span></span
+                                          ><br />
+                                          <span style="color: rgba(0, 0, 0, 1)"
+                                             ><span style="font-size: 14px"
+                                                ><span style="font-size: 14px"
+                                                   ><span
+                                                      style="font-size: 14px"
+                                                      ><span
+                                                         style="
+                                                            font-family: Arial;
+                                                         "
+                                                         ><strong
+                                                            >Question:</strong
+                                                         >&nbsp;How do I
+                                                         schedule an academic
+                                                         advising
+                                                         appointment?</span
+                                                      ></span
+                                                   ></span
+                                                ></span
+                                             ></span
+                                          ></span
+                                       >
+
+                                       <p>
+                                          <span style="font-size: 14px"
+                                             ><span style="font-family: Arial"
+                                                ><span
+                                                   style="
+                                                      color: rgba(0, 0, 0, 1);
+                                                   "
+                                                   ><strong
+                                                      >Answer:&nbsp;</strong
+                                                   >If you are a campus student
+                                                   or an online student in a
+                                                   major from 2017 or before,
+                                                   our contact center agents
+                                                   would be happy to set up an
+                                                   academic advising appointment
+                                                   for you! Pleas</span
+                                                >e&nbsp;<a
+                                                   href="https://www.byui.edu/contact-us/"
+                                                   target="_blank"
+                                                   >contact us&nbsp;</a
+                                                ><span
+                                                   style="
+                                                      color: rgba(0, 0, 0, 1);
+                                                   "
+                                                   >by text, phone, or chat to
+                                                   schedule an appointment with
+                                                   an Academic
+                                                   Advisor.&nbsp;</span
+                                                ></span
+                                             ></span
+                                          ><span style="font-size: 14px"
+                                             ><span style="font-family: Arial"
+                                                ><span
+                                                   style="
+                                                      color: rgba(0, 0, 0, 1);
+                                                   "
+                                                   >You can also set your up
+                                                   your own appointment by
+                                                   following the step by step
+                                                   walk through, se</span
+                                                >e&nbsp;<a
+                                                   href="https://www.byui.edu/iplan/beta/tutorials/advising-schedule-an-appointment"
+                                                   target="_blank"
+                                                   >Advising - Schedule an
+                                                   Appointment</a
+                                                >.&nbsp;</span
+                                             ></span
+                                          ><span style="font-size: 14px"
+                                             ><span style="font-family: Arial"
+                                                ><span
+                                                   style="
+                                                      color: rgba(0, 0, 0, 1);
+                                                   "
+                                                   >For online students in a
+                                                   major after 2017 please fill
+                                                   out the</span
+                                                >&nbsp;<a
+                                                   href="https://byui.az1.qualtrics.com/jfe/form/SV_3PE8EE0yR8m2rVb"
+                                                   target="_blank"
+                                                   >BYU-Pathway Advising Form</a
+                                                >.</span
+                                             ></span
+                                          ><br />
+                                          <br />
+                                          <span style="font-family: Arial"
+                                             ><span style="font-size: 14px"
+                                                ><strong
+                                                   ><a
+                                                      href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/100310"
+                                                      target="_blank"
+                                                      >Ordering a BYU-Idaho
+                                                      Transcript</a
+                                                   ></strong
+                                                ></span
+                                             ></span
+                                          ><span style="font-size: 14px"
+                                             ><span
+                                                style="color: rgba(0, 0, 0, 1)"
+                                                ><span style="font-size: 14px"
+                                                   ><span
+                                                      style="
+                                                         color: rgba(
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            1
+                                                         );
+                                                      "
+                                                      ><span
+                                                         style="font-size: 14px"
+                                                         ><span
+                                                            style="
+                                                               font-family: Arial;
+                                                            "
+                                                            ><br />
+                                                            <strong
+                                                               >Question:&nbsp;</strong
+                                                            >How do I order a
+                                                            BYU-Idaho
+                                                            transcript?<br />
+                                                            <strong
+                                                               >Answer:&nbsp;</strong
+                                                            >To order a
+                                                            transcript,
+                                                            visit&nbsp;<a
+                                                               href="https://www.byui.edu/transcripts"
+                                                               target="_blank"
+                                                               >Order a
+                                                               BYU-Idaho
+                                                               Transcript</a
+                                                            >&nbsp;and select
+                                                            the button that says
+                                                            "Order Official
+                                                            Transcript".</span
+                                                         ></span
+                                                      ></span
+                                                   ></span
+                                                ></span
+                                             ></span
+                                          ><br />
+                                          &nbsp;
+                                       </p>
+                                       <span style="font-size: 14px"
+                                          ><span style="color: rgba(0, 0, 0, 1)"
+                                             ><strong
+                                                ><a
+                                                   href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/101272"
+                                                   target="_blank"
+                                                   >Change Bank Account for
+                                                   FAFSA</a
+                                                ></strong
+                                             ><span style="font-size: 14px"
+                                                ><span
+                                                   style="
+                                                      color: rgba(0, 0, 0, 1);
+                                                   "
+                                                   ><span
+                                                      style="font-size: 14px"
+                                                      ><span
+                                                         style="
+                                                            font-family: Arial;
+                                                         "
+                                                         ><br />
+                                                         <strong
+                                                            >Question</strong
+                                                         >:&nbsp;How do I change
+                                                         the account my FAFSA
+                                                         money gets put into?<br />
+                                                         <strong>Answer</strong
+                                                         >:&nbsp;FAFSA money
+                                                         usually goes to the
+                                                         bank account associated
+                                                         to your eRefund. If you
+                                                         want to learn how to
+                                                         change that bank
+                                                         account here's an
+                                                         article that can walk
+                                                         you through the
+                                                         steps:&nbsp;<a
+                                                            href="https://byui-help.screenstepslive.com/a/960677-how-do-i-enroll-in-erefund"
+                                                            rel="noopener noreferrer"
+                                                            target="_blank"
+                                                            >How Do I Enroll in
+                                                            eRefund?</a
+                                                         >. Make you sure you
+                                                         scroll down to the part
+                                                         where it says "Changing
+                                                         Bank Account for
+                                                         eRefund". Hope this
+                                                         helps!!&nbsp;</span
+                                                      ></span
+                                                   ></span
+                                                ></span
+                                             ></span
+                                          ></span
+                                       ><br />
+                                       <span style="font-family: Arial"
+                                          ><span style="font-size: 14px"
+                                             ><span style="font-size: 14px"
+                                                ><br />
+                                                <strong
+                                                   ><a
+                                                      href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/100323"
+                                                      target="_blank"
+                                                      >Deferment Options</a
+                                                   ><br />
+                                                   <span
+                                                      style="
+                                                         color: rgba(
+                                                            0,
+                                                            0,
+                                                            0,
+                                                            1
+                                                         );
+                                                      "
+                                                      >Question:&nbsp;</span
+                                                   ></strong
+                                                ><span
+                                                   style="
+                                                      color: rgba(0, 0, 0, 1);
+                                                   "
+                                                   >How do I get a deferment?<br />
+                                                   <strong>Answer:&nbsp;</strong
+                                                   >For a list of&nbsp;deferment
+                                                   options available as well as
+                                                   the requirements for each,
+                                                   please refer to&nbsp;<a
+                                                      href="https://www.byui.edu/admissions/deferments"
+                                                      target="_blank"
+                                                      >Deferment Options.</a
+                                                   ></span
+                                                ></span
+                                             ></span
+                                          ></span
+                                       ><span style="font-family: Arial"
+                                          ><span style="font-size: 14px"
+                                             ><span style="font-size: 14px"
+                                                ><span
+                                                   style="
+                                                      color: rgba(0, 0, 0, 1);
+                                                   "
+                                                   ><br />
+                                                   <br />
+                                                   <a
+                                                      href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/100315"
+                                                      target="_blank"
+                                                      ><strong
+                                                         >Transcript Evaluation
+                                                         Timeline</strong
+                                                      ></a
+                                                   ><br />
+                                                   <strong
+                                                      >Question:&nbsp;</strong
+                                                   >How long does it take for my
+                                                   transcripts to be
+                                                   evaluated?<br />
+                                                   <strong>Answer:&nbsp;</strong
+                                                   >From the time that you
+                                                   request your transcripts to
+                                                   be sent to BYU–Idaho, it
+                                                   generally takes 2-4 weeks for
+                                                   the admissions office to
+                                                   receive them. If all the
+                                                   necessary steps have been
+                                                   completed, and BYU–Idaho has
+                                                   received your transcripts, it
+                                                   typically takes 2-4 weeks for
+                                                   them to be reviewed and
+                                                   processed.&nbsp;As soon as
+                                                   your transcripts are reviewed
+                                                   and processed, the transfer
+                                                   evaluation unit will send you
+                                                   a notification email to your
+                                                   student email
+                                                   address.&nbsp;More
+                                                   information about the steps
+                                                   that you need to complete as
+                                                   well as the time line, can be
+                                                   found at&nbsp;<a
+                                                      href="https://www.byui.edu/transfer-evaluation/timeline"
+                                                      target="_blank"
+                                                      >Guidelines.</a
+                                                   ><br />
+                                                   <br />
+                                                   <span style="font-size: 14px"
+                                                      ><span
+                                                         style="
+                                                            color: rgba(
+                                                               0,
+                                                               0,
+                                                               0,
+                                                               1
+                                                            );
+                                                         "
+                                                         ><span
+                                                            style="
+                                                               font-size: 14px;
+                                                            "
+                                                            ><span
+                                                               style="
+                                                                  font-family: Arial;
+                                                               "
+                                                               ><strong
+                                                                  ><a
+                                                                     href="https://td.byui.edu/TDClient/87/Portal/Questions/Details/101201"
+                                                                     target="_blank"
+                                                                     >Forms</a
+                                                                  ></strong
+                                                               ><br />
+                                                               <strong
+                                                                  >Question:</strong
+                                                               >&nbsp;Is there
+                                                               an area on this
+                                                               website that has
+                                                               a links to
+                                                               popular request
+                                                               forms?&nbsp;<br />
+                                                               <strong
+                                                                  >Answer:</strong
+                                                               >&nbsp;You can
+                                                               find these
+                                                               services by going
+                                                               to the top of the
+                                                               OneStop&nbsp;portal
+                                                               and clicking on
+                                                               the black button
+                                                               that says "<a
+                                                                  href="https://td.byui.edu/TDClient/87/Portal/Requests/ServiceCatalog"
+                                                                  rel="noopener noreferrer"
+                                                                  target="_blank"
+                                                                  >Services</a
+                                                               >". You will find
+                                                               different
+                                                               categories, feel
+                                                               free to choose
+                                                               the service
+                                                               depending on what
+                                                               you need! Hope
+                                                               this helps!</span
+                                                            ></span
+                                                         ></span
+                                                      ></span
+                                                   ></span
+                                                ></span
+                                             ></span
+                                          ></span
+                                       >
+                                    </div>
+                                    <span style="font-size: 14px"
+                                       ><span style="font-family: Arial"
+                                          ><span style="color: rgba(0, 0, 0, 1)"
+                                             ><span style="font-family: Arial"
+                                                ><span style="font-size: 14px"
+                                                   ><span
+                                                      style="font-size: 14px"
+                                                      ><span
+                                                         style="
+                                                            color: rgba(
+                                                               0,
+                                                               0,
+                                                               0,
+                                                               1
+                                                            );
+                                                         "
+                                                      ></span></span></span></span></span></span
+                                    ></span>
+
+                                    <div
+                                       class="gutter-bottom-sm question-body CKEditorSuppressMargin wrap-text"
+                                    >
+                                       <div class="gutter-bottom-sm">
+                                          <div
+                                             class="gutter-bottom-sm question-body CKEditorSuppressMargin wrap-text"
+                                          >
+                                             <span style="font-family: Arial"
+                                                ><span style="font-size: 14px"
+                                                   ><span
+                                                      style="font-size: 14px"
+                                                      ><span
+                                                         style="
+                                                            color: rgba(
+                                                               0,
+                                                               0,
+                                                               0,
+                                                               1
+                                                            );
+                                                         "
+                                                      ></span></span></span
+                                             ></span>
+
+                                             <div
+                                                class="gutter-bottom-sm question-body CKEditorSuppressMargin wrap-text"
+                                             >
+                                                <div
+                                                   class="gutter-bottom-sm question-body CKEditorSuppressMargin wrap-text"
+                                                >
+                                                   <h3
+                                                      class="gutter-bottom-sm question-body CKEditorSuppressMargin wrap-text"
+                                                   >
+                                                      <small
+                                                         ><big
+                                                            ><span
+                                                               style="
+                                                                  color: rgba(
+                                                                     0,
+                                                                     0,
+                                                                     0,
+                                                                     1
+                                                                  );
+                                                               "
+                                                               ><span
+                                                                  style="
+                                                                     font-size: 14px;
+                                                                  "
+                                                                  ><span
+                                                                     style="
+                                                                        font-family: Arial;
+                                                                     "
+                                                                  ></span></span></span></big
+                                                      ></small>
+                                                   </h3>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+
+                                    <h3>
+                                       <small
+                                          ><big
+                                             ><span style="font-size: 14px"
+                                                ><span
+                                                   style="font-family: Arial"
+                                                   ><a
+                                                      href="https://td.byui.edu/TDClient/87/Portal/Forums/Questions/?Filter=all"
+                                                      target="_blank"
+                                                      >See All Recent
+                                                      Questions</a
+                                                   ></span
+                                                ></span
+                                             ></big
+                                          ></small
+                                       ><strong
+                                          ><span style="font-size: 16px"
+                                             ><span
+                                                style="font-size: 14px"
+                                             ></span></span
+                                       ></strong>
+                                    </h3>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="desktop-module">
+                           <div
+                              id="202090"
+                              class="desktop-module panel panel-default no-border"
+                           >
+                              <div class="ModuleContent">
+                                 <div style="overflow: hidden"></div>
+                              </div>
+                           </div>
                         </div>
                      </div>
                   </div>
                </div>
+            </div>
+         </main>
+      </form>
 
+      <footer role="contentinfo">
+         <div class="master-footer">
+            <div class="default-footer">
+               Powered by
+               <a href="https://www.teamdynamix.com" target="_blank"
+                  >TeamDynamix</a
+               >
+               |
+               <a href="https://td.byui.edu/TDClient/87/Portal/SiteMap"
+                  >Site Map</a
+               >
             </div>
          </div>
-s
-      </div>
-   </div>
-   </div>
-   <script src="https://unpkg.com/htmlincludejs"></script>
-   <include src="./happyOrNotModule.html"></include>
-</body>
+      </footer>
 
+      <div
+         id="SiteSearch-text-5022c2766da14a48a72fce5bc5426309_results"
+         class="dropdown-menu search-result-box"
+         aria-live="polite"
+         style="
+            position: fixed;
+            z-index: 1000;
+            margin-left: 0px;
+            top: 53px;
+            left: 691.031px;
+            width: 342px;
+         "
+      ></div>
+      <div
+         class="quiq-storage-iframe-wrapper"
+         style="display: none; width: 0px; height: 0px"
+      >
+         <iframe
+            src="https://static.quiq-cdn.com/chat-ui/conversation-starter-storage-3.1.243-hotfix.1-70854f0d.html?key=dcab9af8-7a99-c199-f677-0587e0fcc2ff&amp;tenantId=byui&amp;pageConfigurationId=quiq-dynamic-page-configuration_bsc"
+         ></iframe>
+      </div>
+      <div id="quiqWebChat" style="display: none">
+         <!--
+      This div was inserted to support Quiq's legacy webchat
+      and the custom implementations that may have used this
+      id to make programmatic decisions.
+   
+      Do not use this container to make programmatic decisions.
+      This id is no longer supported and is being phased out.
+   
+      Contact your Quiq representative if you are interested
+      in completing the upgrade to the new chat experience.
+   -->
+      </div>
+      <div
+         class="quiq-floating-element quiq-position-x-right quiq-position-y-bottom SDKLauncher quiq-widget-element quiq-widget-id-quiq-webchat-1_-46-_7-default-widget quiq-widget-layout-native quiq-widget-position-float quiq-platform-web-chat quiq-action-element-native quiq-device-supported quiq-platform-enabled quiq-widget-enabled quiq-agent-available quiq-chat-is-available quiq-web-chat-closed quiq-web-chat-open-action-enabled quiq-contact-point-bsc quiq-action-element"
+         aria-label="Open Web Chat to contact us."
+         title="Chat with us now!"
+         style="margin: 12px 24px 24px 0px"
+      >
+         <div class="quiq-togglechatbutton-wrapper">
+            <button
+               class="quiq-action-toggle quiq-togglechatbutton-button"
+               aria-label="Open chat"
+               style="background-color: rgb(0, 118, 182)"
+            >
+               <span class="quiq-icon toggleChatButtonIcon"
+                  ><svg
+                     xmlns="http://www.w3.org/2000/svg"
+                     viewBox="0 0 576 512"
+                  >
+                     <path
+                        fill="currentColor"
+                        d="M416 192c0-88.4-93.1-160-208-160S0 103.6 0 192c0 34.3 14.1 65.9 38 92-13.4 30.2-35.5 54.2-35.8 54.5-2.2 2.3-2.8 5.7-1.5 8.7S4.8 352 8 352c36.6 0 66.9-12.3 88.7-25 32.2 15.7 70.3 25 111.3 25 114.9 0 208-71.6 208-160zm122 220c23.9-26 38-57.7 38-92 0-66.9-53.5-124.2-129.3-148.1.9 6.6 1.3 13.3 1.3 20.1 0 105.9-107.7 192-240 192-10.8 0-21.3-.8-31.7-1.9C207.8 439.6 281.8 480 368 480c41 0 79.1-9.2 111.3-25 21.8 12.7 52.1 25 88.7 25 3.2 0 6.1-1.9 7.3-4.8 1.3-2.9.7-6.3-1.5-8.7-.3-.3-22.4-24.2-35.8-54.5z"
+                     ></path></svg
+               ></span>
+            </button>
+         </div>
+      </div>
+
+      <!-- the glad or sad goes under
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      ..
+      
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      
+      .
+      .
+      . -->
+
+      <div id="theGladOrSad">
+         <div class="feedbackButtonWrapper">
+            <div class="fbClosedButton preload" id="feedbackButton">
+               <p class="fbClosedText">Feedback</p>
+            </div>
+         </div>
+      </div>
+      <script>
+         console.log(window.location);
+
+         var isOpen = false;
+
+         document
+            .getElementById("feedbackButton")
+            .addEventListener("click", handleFeedbackButtonClick);
+
+         function handleFeedbackButtonClick() {
+            if (isOpen) {
+               isOpen = !isOpen;
+               closeIt();
+            } else {
+               isOpen = !isOpen;
+               openIt();
+            }
+         }
+
+         function closeIt() {
+            document.getElementById("feedbackButton").translate("325px");
+         }
+
+         function openIt() {
+            document.getElementById("feedbackButton").classList =
+               "fbOpenButton";
+         }
+
+         console.log(document.getElementsByName("rating"));
+      </script>
+      <!-- 
+      ..
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      .
+      -->
+   </body>
 </html>
