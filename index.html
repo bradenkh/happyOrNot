@@ -1909,40 +1909,19 @@
       <div id="theGladOrSad">
          <div class="feedbackButtonWrapper">
             <div class="fbClosedButton preload" id="feedbackButton">
-               <p class="fbClosedText">Feedback</p>
+               <p id="fbButtonText">Feedback</p>
+               <div id="starMenu" class="hidden preload">
+                  <div id="star1" class="star" name="star" onhover></div>
+                  <div id="star2" class="star" name="star"></div>
+                  <div id="star3" class="star" name="star"></div>
+                  <div id="star4" class="star" name="star"></div>
+                  <div id="star5" class="star" name="star"></div>
+               </div>
+               <div id="writtenFeedBackMenu"></div>
             </div>
          </div>
       </div>
-      <script>
-         console.log(window.location);
-
-         var isOpen = false;
-
-         document
-            .getElementById("feedbackButton")
-            .addEventListener("click", handleFeedbackButtonClick);
-
-         function handleFeedbackButtonClick() {
-            if (isOpen) {
-               isOpen = !isOpen;
-               closeIt();
-            } else {
-               isOpen = !isOpen;
-               openIt();
-            }
-         }
-
-         function closeIt() {
-            document.getElementById("feedbackButton").translate("325px");
-         }
-
-         function openIt() {
-            document.getElementById("feedbackButton").classList =
-               "fbOpenButton";
-         }
-
-         console.log(document.getElementsByName("rating"));
-      </script>
+      <script src="/test.js"></script>
       <!-- 
       ..
       .
