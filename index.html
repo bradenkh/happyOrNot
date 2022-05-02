@@ -1907,43 +1907,50 @@
       . -->
 
       <div id="theGladOrSad">
-         <div class="feedbackButtonWrapper">
-            <div class="fbClosedButton preload" id="feedbackButton">
-               <div id="closeButton" class="closeButton">x</div>
-               <p id="fbButtonText">+-</p>
-               <div id="starMenu" class="hidden preload">
-                  <div id="star1" class="star" name="star" onhover></div>
-                  <div id="star2" class="star" name="star"></div>
-                  <div id="star3" class="star" name="star"></div>
-                  <div id="star4" class="star" name="star"></div>
-                  <div id="star5" class="star" name="star"></div>
-               </div>
-
-               <div id="writtenFeedBackMenu">
-                  <form id="writtenFeedbackForm">
-                     <textarea id="textFeedback" class="hidden"></textarea>
-                     <p id="emailPrompt" class="hidden">
-                        Your email (optional):
-                     </p>
-                     <input type="text" id="emailInput" class="hidden" />
-                     <p id="feedbackDisclaimer" class="hidden">
-                        Feedback is not monitored by our support team.<br />
-                        If you need help with a certain issue,<br />
-                        <a
-                           href="https://td.byui.edu/TDClient/87/Portal/Home/?ID=66237ad8-7a61-496a-927d-3aaa59a6a421"
-                        >
-                           please contact us here.
-                        </a>
-                     </p>
-                     <p id="feedbackSubmitError"></p>
-                     <input
-                        type="submit"
-                        value="Submit"
-                        id="feedbackSubmit"
-                        class="hidden"
-                     />
-                  </form>
-               </div>
+         <div id="feedbackMenu" class="feedbackMenu">
+            <div id="starMenu" class="hidden preload">
+               <p id="menu-top-text" class="star-menu-top-text"></p>
+               <div></div>
+               <div id="star1" class="star" name="star" onhover></div>
+               <div id="star2" class="star" name="star"></div>
+               <div id="star3" class="star" name="star"></div>
+               <div id="star4" class="star" name="star"></div>
+               <div id="star5" class="star" name="star"></div>
+            </div>
+            <div id="writtenFeedBackMenu">
+               <form id="writtenFeedbackForm">
+                  <p id="feedbackFormText" class="hidden">
+                     Let us know your thoughts! (optional)
+                  </p>
+                  <textarea id="textFeedback" class="hidden"></textarea>
+                  <p id="emailPrompt" class="hidden">Your email (optional):</p>
+                  <input
+                     type="text"
+                     id="emailInput"
+                     class="hidden"
+                     name="email"
+                  />
+                  <p id="feedbackDisclaimer" class="hidden">
+                     Feedback is not monitored by our support team. If you need
+                     help with a certain issue,
+                     <a
+                        class="feedbackContactLink"
+                        href="https://td.byui.edu/TDClient/87/Portal/Home/?ID=66237ad8-7a61-496a-927d-3aaa59a6a421"
+                     >
+                        please contact us here.
+                     </a>
+                  </p>
+                  <p id="feedbackSubmitError" class="hidden"></p>
+                  <input
+                     type="submit"
+                     value="Submit"
+                     id="feedbackSubmit"
+                     class="hidden"
+                  />
+               </form>
+            </div>
+            <div id="open-close-button" class="open-close-button">
+               <p class="button-text">Feedback</p>
             </div>
          </div>
       </div>

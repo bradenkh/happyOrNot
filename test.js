@@ -1,8 +1,13 @@
 var starIsOpen = false;
 var feedbackIsOpen = false;
 
+var rating;
+var uid = getUID();
+var feedback;
+var email;
+
 document
-   .getElementById("fbButtonText")
+   .getElementById("open-close-button")
    .addEventListener("click", handleFeedbackButtonClick);
 
 function handleFeedbackButtonClick() {
@@ -33,16 +38,14 @@ function closeStarMenu() {
 
 function openStarMenu() {
    starIsOpen = true;
-   document.getElementById("feedbackButton").classList = "fbStarMenu";
-   setTimeout(() => {
-      document.getElementById("fbButtonText").innerHTML =
-         "How would you rate this site?";
-   }, 150);
-   document.getElementById("starMenu").classList = "starMenuShown";
-   for (let i = 1; i < 6; i++) {
-      var star = document.getElementById("star" + i);
-      star.classList = "star";
-   }
+   document.getElementById("starMenu").classList = "star-menu-open";
+   document.getElementById("feedbackMenu").classList = "feedbackMenu-star";
+   document.getElementById("menu-top-text").innerText =
+      "How would you rate the OneStop?";
+   // for (let i = 1; i < 6; i++) {
+   //    var star = document.getElementById("star" + i);
+   //    star.classList = "star";
+   // }
    addStarListeners();
 }
 
@@ -79,34 +82,39 @@ function lightStars(num) {
       el.classList = "star";
    });
    for (let i = 0; i < num; i++) {
-      stars[i].classList = "starChecked";
+      stars[i].classList = "star-checked";
    }
 }
 
 function selectStar(num) {
    lightStars(num);
    removeStarListeners();
-   openFeedbackMenu();
-   console.log("{rating:" + num + "}");
+   // this is where we set what number will be sent
+   // to the server.
+   rating = num;
+   setTimeout(openFeedbackMenu, 500);
 }
 
 function openFeedbackMenu() {
    starIsOpen = false;
    feedbackIsOpen = true;
-   document.getElementById("feedbackButton").classList = "fbFeedbackMenuOpen";
    var stars = document.getElementsByName("star");
    stars.forEach((el) => {
       el.classList = "hidden";
    });
+
    document.getElementById("starMenu").classList = "hidden";
-   document.getElementById("textFeedback").classList = "feedbackTextInput";
-   document.getElementById("fbButtonText").innerHTML =
-      "Let us know your thoughts!";
-   document.getElementById("emailPrompt").classList = "emailPrompt";
-   document.getElementById("emailInput").classList = "emailInput";
+   document.getElementById("writtenFeedbackForm").classList =
+      "written-feedback-form";
+   document.getElementById("open-close-button").classList =
+      "open-close-button-feedback";
+   document.getElementById("feedbackFormText").classList = "feedbackFormText";
+   document.getElementById("textFeedback").classList = "feedback-text-input";
+   document.getElementById("emailPrompt").classList = "email-prompt";
+   document.getElementById("emailInput").classList = "email-input";
    document.getElementById("feedbackDisclaimer").classList =
-      "feedbackDisclaimer";
-   document.getElementById("feedbackSubmit").classList = "feedbackSubmit";
+      "feedback-disclaimer";
+   document.getElementById("feedbackSubmit").classList = "feedback-submit";
    console.log(document.getElementById("writtenFeedbackForm"));
    var form = document.getElementById("writtenFeedbackForm");
    console.log(form);
@@ -114,16 +122,12 @@ function openFeedbackMenu() {
 }
 
 function submitFeedback(event) {
+   event.preventDefault();
    var feedbackText = document.getElementById("textFeedback").value;
    var email = document.getElementById("emailInput").value;
-   if (feedbackText == "") {
-      document.getElementById("feedbackSubmitError").innerText =
-         "Please enter feedback before submission.";
-   } else {
-      console.log("{email:" + email + ",feedback:" + feedbackText + "}");
-      activateThankYou();
-   }
-   event.preventDefault();
+   console.log("{email:" + email + ",feedback:" + feedbackText + "}");
+   // activateThankYou();
+   sendFeedback();
 }
 
 function activateThankYou() {
@@ -134,4 +138,46 @@ function activateThankYou() {
    setTimeout(() => {
       document.getElementById("theGladOrSad").classList = "hidden";
    }, 2000);
+}
+
+function getUID() {
+   if (document.querySelector("[title='Sign In']") != null) {
+      return null;
+   }
+   var list = document
+      .querySelector("div.dropdown.pull-right")
+      .querySelector("ul")
+      .querySelectorAll("li");
+   var link;
+   list.forEach((element) => {
+      var childLink = element.querySelector("a");
+      console.log();
+      if (childLink) {
+         if (childLink.innerText.includes("My Profile"))
+            link = childLink.getAttribute("href");
+      }
+   });
+   return link.split("ID=")[1];
+}
+
+function buildURL() {
+   var postUrl = "localhost:8080/feedback?" + "rating=" + rating;
+   // "&webpage=" +
+   // window.location.href.split("//:")[1];
+   if (uid) {
+      postUrl += "&uid=" + uid;
+   }
+   if (email) {
+      postUrl += "&email=" + email;
+   }
+   if (feedback) {
+      postUrl += "&feedback=" + feedback;
+   }
+}
+
+function sendFeedback() {
+   var postUrl = buildURL();
+   var xhr = new XMLHttpRequest();
+   xhr.open("POST", postUrl, true);
+   xhr.send();
 }
