@@ -1,67 +1,100 @@
-@keyframes closeAnimation {
-   from {
-      width: 400px;
-      height: 400px;
-      border-radius: 25px;
-      bottom: 104px;
-      right: 24px;
-   }
-   to {
-      width: 110px;
-      height: 60px;
-      border-radius: 50px;
-      bottom: 24px;
-      right: 104px;
-   }
+.hidden {
+   display: none;
 }
-.preload {
-   animation-duration: 0s !important;
+
+.hidden > * {
+   display: none;
 }
-.fbClosedButton {
-   /* positioning */
+
+.hidden > * > * {
+   display: none;
+}
+
+.closed-menu {
+   padding: 0px;
+   width: 20px;
+   height: 100px;
+   color: #ffffff;
    position: fixed;
-   width: 110px;
-   height: 60px;
-   bottom: 24px;
-   right: 104px;
-   animation: closeAnimation 0.5s; /* shape and color */
-   background-color: #6b9d41;
-   border-radius: 50px;
-   box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px, rgb(0 0 0 / 12%) 0px 1px 4px; /* text effects */
-   color: #fff;
-   text-align: center;
+   left: 0px;
+   bottom: 20%;
+   background-color: #006eb6;
+   border-radius: 0px 25px 25px 0px;
+   display: flex;
+   align-items: center;
 }
-@keyframes openAnimation {
-   from {
-      width: 110px;
-      height: 60px;
-      border-radius: 50px;
-      bottom: 24px;
-      right: 104px;
-   }
-   to {
-      width: 400px;
-      height: 400px;
-      border-radius: 25px;
-      bottom: 104px;
-      right: 24px;
-   }
+
+.closed-menu > div {
+   writing-mode: vertical-rl;
+   margin: 0px;
 }
-.fbOpenButton {
-   /* positioning */
+
+.star-menu {
+   width: 300px;
+   height: 100px;
+   color: #ffffff;
    position: fixed;
-   width: 400px;
-   height: 400px;
-   bottom: 104px;
-   right: 24px;
-   animation: openAnimation 1s; /* shape and color */
-   background-color: #6b9d41;
-   border-radius: 25px;
-   box-shadow: rgb(0 0 0 / 12%) 0px 1px 6px, rgb(0 0 0 / 12%) 0px 1px 4px; /* text effects */
-   color: #fff;
+   left: 0px;
+   bottom: 20%;
+   background-color: #006eb6;
+   border-radius: 0px 25px 25px 0px;  
+}
+
+.star-menu > div {
+   display: grid;
+   grid-template-columns: 4% 18% 18% 18% 18% 18% 6%;
+   grid-template-rows: 20px 20px 60px;
+}
+
+.star-menu-close {
+   text-align: right;
+   grid-row-start: 1;
+   grid-row-end: 2;
+   grid-column-start: 1;
+   grid-column-end: 7;
+}
+
+.star-menu-text {
    text-align: center;
+   grid-row-start: 2;
+   grid-row-end: 3;
+   grid-column-start: 1;
+   grid-column-end: 7;
 }
-.fbClosedText {
-   margin-top: 6px;
-   font-size: medium;
+
+.star {
+   width: 100%;
+   height: 100%;
+   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAnCAYAAAB9qAq4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAPRSURBVHgBxVjdUdtAEN4VhMnkyakgcgWBCmIqIFSAmQk/b0AFmAqAt4zJjE0FmApwKjCpwKICnIfw4Iy12dUJ3cnWnWSdk3wznjnfj7S33+3ud0JYAWh82oDg5QQINgGwAUh9iKf32OxPwBMInqDxcQgYP3AznBuKgKZbvkYG4I24A4vGgep70wFP+BuItJO1ia6Z5jM9hns0bjfAA14G0vhLKzlzChE2b06x2b2SdtrHY283wQOeHgzaWZPoXrfhVs+ZfQafN4APED7pP2sD3Y6Heg7ugQdqG6jozYKD6f06fB3D5jdu02v0NjjSW1ATHh406AUcLgyviOb6Bpr0Et4uTiBNuQfNtQx00ZvZtCKa1/Mv5qpQCXFbtwvozR7INCOcqGnEOfE4ggrgDWfzMDWsxeWqB8UVwQ0Ktos8qJ7LnsbgAZZHJAmfc+oA01o6hnqIMOw2XRMoOng2kvly4M2vs+t7Rg+fGaxe3Amuy+fgBfMkQVLRSGpkG0I6x9wOKWia/P8P0Phgk6N+lP6dBHmPxV5laSUIAqM6iYFmQkW4pKfDS18FUgcieuXdXNOvdC8OMTEGN8SloTE/SqMzgn+AlNa7IhuCRPGy8s2XJkgim3d0Dn8Z9HR0kp65UHeKrny3JQ7KSX7eSVtonksLA97J2aq9mdxj8Bd7DVtG70SiPtWUCXBxYeEdQ9y9b0vIyxtXWBge+R27845A+0MOOzyapxihgx+6F+BjXBIIcJrvpGtR40Xznbe6tFTld6pK0BXUMu6Ar6ZormVm4n0lLIrhVDPJQo4k0HcMWfEMdRHDT+PfRAWC3Tj1umoI9Uum91AbvwemBBMby1DBwFlLtzlxelzE1drgUfdstMvWlBuIgVbD8knDF+btD3GnbLrTQCVgqZV1xMF393wuV5LfnJj2jRWtsrJa4sF5eu3JWuW2l5H8OEVZRYei2VThbprdBlakN8ltOrlzooc7Z5lcgmZHop5T2gVaMZ0jRd72eaNQdKQCRacrmr63BZ/Dg256VZGfjfLG0RCkdmvIBkbszdy1cxma7QZa6M3rNkNUSIUJb7b5jrLLbbMcNvh/n6KjXi4gTJpzgqGqgUBh1ozphzJOdBsHQr6WMo20lVMgzW5HjgSYFQioLbpTX20Tb6cL6CMsbyBGuonnyaG36rabx4XVciQSnUnmxUrpTPamPLPwXfPPsQ0obYg9yyjX0TXRiH2ogPRZ52C7dyO0WSXdFg85H1wguYQaWttfVsBav2XzeU2OhAWlH9HVmZFPHRIQNJTbPngg8SYEaeTPBmVq5g/pb9gNj1eMqgAAAABJRU5ErkJggg==");
+   background-repeat: no-repeat;
+   background-position: center;
 }
+
+.star-checked {
+   width: 100%;
+   height: 100%;
+   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAnCAYAAAB9qAq4AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ9SURBVHgBzZjNbdtAEIXf0E4Q+MR0QFYQqYLQFTiuwDSQBL5FqcByBVFuhhTAcgdKBVEJ6oAqQaccBIjjWUoirJ/dJblegd9BEDhDcjCzu/OGhDeAs16I4P8PMDoAhSAeI1/+pXi8gCMERzi7i0D5P/kb7Znm4GXXNcgAzuR9HAaH9bV3fTjiHiDxld5GN5ylIRxwCpCzr0mx5vSI7UMHDjhmMEjtPqsvcMAtQMJnuw/dwIHGAa7Le3Rz7BPKTk/QEIcMVinvluZlbh5glfKWvs3L3CjAGuXd0rjM57svlq5QiTxFXYjlTLybV3KNH0s/2gSWSLt6Qr2s+ETaJH5SPJzQppdmaCMcXAaS+ie0FeJ72SS5UyvyC3ckQHLWbB5ZBLIYn9FaaCoZXA6gdk37kJ1MD0GheEX5tiqTzL/BF111Hu5Ifs6+pXIy/rJoPI/wQmVNzr/B9srBTGKYMXwzk3Pv+nUXUWiHJs6+98V6j1MgJaV41DtmMk51hSigwGcLlI2Q31L8Z6pzsI6dHksu6+0ipnhgPIeryq0Ib0+oYrRRIcBVAm+8T20e9gApcBp6zM+mK6uLyXgSKcbLj6bPI5YM+izvFnOZzQH6LG/5DnOZDQf1CZW2ocyGDDYpL0/lZ4La6MusD7BuedWQE40uKRpey/+HWveCEp3FkEGOUA1pV9zdUSDxsC+NP0ZVnUn8CfUDpDlslLptNDu4W6mSQmeKjz3Cuc5yrr2H82fZYYnGKH30TObWxzFMr10v/J7ozJk8Symj6LijfNPWPQMGjksu2Qh8druv22xoRYes12JJNAmwfHDxqUOpbJ6qaR8OFKodwWbUXU1MUkvxAiqJ5iAocyhFAAAAAElFTkSuQmCC");
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.feedback-menu {
+   padding: 0px;
+   width: 200px;
+   height: 300px;
+   color: #ffffff;
+   position: fixed;
+   left: 0px;
+   bottom: 20%;
+   background-color: #006eb6;
+   border-radius: 0px 25px 25px 0px;
+   display: flex;
+   align-items: center;
+
+}
+
+.thankyou-menu {
+
+}
+
+
