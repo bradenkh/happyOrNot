@@ -1,13 +1,10 @@
-.hidden {
-   display: none;
-}
-
-.hidden > * {
-   display: none;
-}
-
-.hidden > * > * {
-   display: none;
+@keyframes slide-out {
+   from {
+      transform: translateX(0px);
+   }
+   to {
+      transform: translateX(-300px);
+   }
 }
 
 .closed-menu {
@@ -29,6 +26,32 @@
    margin: 0px;
 }
 
+@keyframes openStarMenu {
+   from {
+      padding: 0px;
+      width: 20px;
+      height: 100px;
+      color: #ffffff;
+      position: fixed;
+      left: 0px;
+      bottom: 20%;
+      background-color: #006eb6;
+      border-radius: 0px 25px 25px 0px;
+      display: flex;
+      align-items: center;
+   }
+   to {
+      width: 300px;
+      height: 100px;
+      color: #ffffff;
+      position: fixed;
+      left: 0px;
+      bottom: 20%;
+      background-color: #006eb6;
+      border-radius: 0px 25px 25px 0px;
+   }
+}
+
 .star-menu {
    width: 300px;
    height: 100px;
@@ -37,13 +60,27 @@
    left: 0px;
    bottom: 20%;
    background-color: #006eb6;
-   border-radius: 0px 25px 25px 0px;  
+   border-radius: 0px 25px 25px 0px;
+   animation: openStarMenu 1s;
+}
+
+@keyframes slide-in {
+   from {
+      transform: translateX(-400px);
+   }
+   to {
+      transform: translateX(0px);
+   }
 }
 
 .star-menu > div {
    display: grid;
    grid-template-columns: 4% 18% 18% 18% 18% 18% 6%;
    grid-template-rows: 20px 20px 60px;
+}
+
+.star-menu > div > * {
+   animation: slide-in 1s;
 }
 
 .star-menu-close {
@@ -59,7 +96,7 @@
    grid-row-start: 2;
    grid-row-end: 3;
    grid-column-start: 1;
-   grid-column-end: 7;
+   grid-column-end: 8;
 }
 
 .star {
@@ -78,9 +115,35 @@
    background-position: center;
 }
 
+@keyframes openFeedbackMenu {
+   from {
+      width: 300px;
+      height: 100px;
+      color: #ffffff;
+      position: fixed;
+      left: 0px;
+      bottom: 20%;
+      background-color: #006eb6;
+      border-radius: 0px 25px 25px 0px;
+   }
+   to {
+      padding: 0px;
+      width: 300px;
+      height: 300px;
+      color: #ffffff;
+      position: fixed;
+      left: 0px;
+      bottom: 20%;
+      background-color: #006eb6;
+      border-radius: 0px 25px 25px 0px;
+      display: block;
+      align-items: center;
+   }
+}
+
 .feedback-menu {
    padding: 0px;
-   width: 200px;
+   width: 300px;
    height: 300px;
    color: #ffffff;
    position: fixed;
@@ -88,13 +151,104 @@
    bottom: 20%;
    background-color: #006eb6;
    border-radius: 0px 25px 25px 0px;
-   display: flex;
+   display: block;
    align-items: center;
+   animation: openFeedbackMenu 1s;
+}
 
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
+#feedback-content {
+   text-align: center;
+   animation: fadeIn 1s;
+}
+
+#feedback-content > p {
+   margin: 0px;
+   padding: 5px 10px 0px 5px;
+}
+
+#feedback-content > input[type="text"] {
+   border-radius: 15px;
+   width: 90%;
+   border: none;
+}
+
+#feedback-content > input[type="submit"] {
+   background-color: #ffffff;
+   border: none;
+   color: #006eb6;
+   border-radius: 25px;
+   width: 80px;
+   height: 30px;
+   margin: auto;
+   margin-top: -6px;
+}
+
+#feedback-content > textarea {
+   border-radius: 15px;
+   width: 90%;
+   border: none;
+   resize: none;
+   height: 80px;
+}
+
+#feedback-content > a:link {
+   color: white;
+   text-decoration: underline;
+}
+
+@keyframes openThankyou {
+   from {
+      padding: 0px;
+      width: 300px;
+      height: 300px;
+      color: #ffffff;
+      position: fixed;
+      left: 0px;
+      bottom: 20%;
+      background-color: #006eb6;
+      border-radius: 0px 25px 25px 0px;
+      display: block;
+      align-items: center;
+   }
+   to {
+      text-align: center;
+      font-size: large;
+      padding: 0px;
+      width: 300px;
+      height: 55px;
+      color: #ffffff;
+      position: fixed;
+      left: 0px;
+      bottom: 20%;
+      background-color: #006eb6;
+      border-radius: 0px 25px 25px 0px;
+      display: block;
+      align-items: center;
+   }
 }
 
 .thankyou-menu {
-
+   text-align: center;
+   font-size: large;
+   padding: 0px;
+   width: 300px;
+   height: 55px;
+   color: #ffffff;
+   position: fixed;
+   left: 0px;
+   bottom: 20%;
+   background-color: #006eb6;
+   border-radius: 0px 25px 25px 0px;
+   display: block;
+   align-items: center;
+   animation: openThankyou 1s;
 }
-
-
