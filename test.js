@@ -1,15 +1,16 @@
 var rating = 0;
 
 window.onload = function () {
-   document.getElementById("theGladOrSad").classList = "closed-menu";
-   document
-      .getElementById("closed-content")
-      .addEventListener("click", openStarMenu);
+   openClosedMenu();
 };
 
 /* opening and closing menu functions */
 function openClosedMenu() {
    document.getElementById("theGladOrSad").classList = "closed-menu";
+   document
+      .getElementById("closed-content")
+      .addEventListener("click", openStarMenu);
+   document.getElementById("closed-content").classList = "";
 }
 
 function openStarMenu() {
@@ -20,6 +21,14 @@ function openStarMenu() {
    // show content
    document.getElementById("star-content").classList = "";
    addStarListeners();
+   addStarClose();
+}
+
+function addStarClose() {
+   document.getElementById("star-menu-close").addEventListener("click", () => {
+      openClosedMenu();
+      document.getElementById("star-content").classList = "hidden";
+   });
 }
 
 function openFeedbackMenu() {
@@ -32,6 +41,12 @@ function openFeedbackMenu() {
    document
       .getElementById("feedback-content")
       .addEventListener("submit", submitFeedback);
+   document
+      .getElementById("feedback-menu-close")
+      .addEventListener("click", () => {
+         const submitEvent = new SubmitEvent("submit");
+         document.getElementById("feedback-content").dispatchEvent(submitEvent);
+      });
 }
 
 function openThankyouMenu() {
@@ -41,6 +56,18 @@ function openThankyouMenu() {
    document.getElementById("theGladOrSad").classList = "thankyou-menu";
    // show content
    document.getElementById("thankyou-content").classList = "";
+   setTimeout(() => {
+      document.getElementById("theGladOrSad").classList = "closed-thankyou";
+   }, "2000");
+}
+
+function closeStarMenu() {
+   document.getElementById("star-content").classList = "hidden";
+   document.getElementById("star-menu-close").addEventListener("click", () => {
+      document.getElementById("theGladOrSad").style.animation =
+         "closeStarMenu 1s";
+      document.getElementById("theGladOrSad").classList = "closed-menu";
+   });
 }
 
 function createMouseListeners(num) {
@@ -66,7 +93,6 @@ function addStarListeners() {
          }
       });
    for (let i = 1; i < 6; i++) {
-      console.log(i);
       createMouseListeners(i);
    }
 }
@@ -79,26 +105,19 @@ function lightStars(num) {
    for (let i = 5; i > num; i--) {
       stars[i - 1].classList = "star";
    }
-   // for (let i = 5; i > num; i--) {
-   //    console.log(i);
-   //    document.getElementById("star" + num).classList = "star";
-   //    // stars[i].classList = "star-checked";
-   // }
 }
 
 function selectStar(num) {
    rating = num;
    lightStars(num);
-   setTimeout(openFeedbackMenu, 1000);
+   // document.getElementById("star" + num).classList = "star-selected";
+   setTimeout(openFeedbackMenu, 750);
 }
 
 function submitFeedback(event) {
    event.preventDefault();
-   var feedbackText = document.getElementById("textFeedback").value;
-   var email = document.getElementById("emailInput").value;
-   console.log("{email:" + email + ",feedback:" + feedbackText + "}");
    openThankyouMenu();
-   //  sendFeedback();
+   sendFeedback();
 }
 
 function getUID() {
@@ -112,7 +131,6 @@ function getUID() {
    var link;
    list.forEach((element) => {
       var childLink = element.querySelector("a");
-      console.log();
       if (childLink) {
          if (childLink.innerText.includes("My Profile"))
             link = childLink.getAttribute("href");
@@ -121,24 +139,25 @@ function getUID() {
    return link.split("ID=")[1];
 }
 
-function buildURL() {
-   var postUrl = "localhost:8080/feedback?" + "rating=" + rating;
-   // "&webpage=" +
-   // window.location.href.split("//:")[1];
-   if (uid) {
-      postUrl += "&uid=" + uid;
-   }
+function buildBody() {
+   var email = document.getElementById("emailInput");
+   var feedbackText = document.getElementById("textFeedback");
+   var body;
+   body.rating = rating;
+   body.url = window.location.href;
    if (email) {
-      postUrl += "&email=" + email;
+      body.email = email.value;
    }
-   if (feedback) {
-      postUrl += "&feedback=" + feedback;
+   if (feedbackText) {
+      body.feedback = feedbackText.value;
    }
+   return body;
 }
 
 function sendFeedback() {
-   var postUrl = buildURL();
+   var postUrl = "localhost:8080/feedback";
+   var postBody = buildBody();
    var xhr = new XMLHttpRequest();
    xhr.open("POST", postUrl, true);
-   xhr.send();
+   xhr.send(JSON.stringify(postBody));
 }
