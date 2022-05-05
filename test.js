@@ -1,4 +1,4 @@
-var rating = 0;
+var stars = 0;
 
 window.onload = function () {
    openClosedMenu();
@@ -73,12 +73,12 @@ function closeStarMenu() {
 function createMouseListeners(num) {
    element = document.getElementById("star" + num);
    element.addEventListener("mouseover", function starOver() {
-      if (rating == 0) {
+      if (stars == 0) {
          lightStars(num);
       }
    });
    element.addEventListener("click", function starClick() {
-      if (rating == 0) {
+      if (stars == 0) {
          selectStar(num);
       }
    });
@@ -88,7 +88,7 @@ function addStarListeners() {
    document
       .getElementById("star-content")
       .addEventListener("mouseleave", function mouseLeave() {
-         if (rating == 0) {
+         if (stars == 0) {
             lightStars(0);
          }
       });
@@ -108,7 +108,7 @@ function lightStars(num) {
 }
 
 function selectStar(num) {
-   rating = num;
+   stars = num;
    lightStars(num);
    // document.getElementById("star" + num).classList = "star-selected";
    setTimeout(openFeedbackMenu, 750);
@@ -142,15 +142,15 @@ function getUID() {
 function buildBody() {
    var email = document.getElementById("emailInput");
    var feedbackText = document.getElementById("textFeedback");
-   var body;
-   body.rating = rating;
-   body.url = window.location.href;
-   if (email) {
-      body.email = email.value;
-   }
-   if (feedbackText) {
-      body.feedback = feedbackText.value;
-   }
+   var url = window.location.href;
+   var uid = getUID();
+   const body = {
+      rating: stars,
+      website: url,
+      uid: uid,
+      email: email,
+      feedback: feedbackText,
+   };
    return body;
 }
 

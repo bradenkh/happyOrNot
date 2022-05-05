@@ -210,9 +210,21 @@
 }
 
 #feedback-content > input[type="text"] {
+   padding: 0px 6px 0px 6px;
+   color: black;
    border-radius: 15px;
    width: 90%;
    border: none;
+}
+
+#feedback-content > textarea {
+   padding: 0px 6px 0px 6px;
+   color: black;
+   border-radius: 15px;
+   width: 90%;
+   border: none;
+   resize: none;
+   height: 80px;
 }
 
 #feedback-content > input[type="submit"] {
@@ -224,14 +236,6 @@
    height: 30px;
    margin: auto;
    margin-top: -6px;
-}
-
-#feedback-content > textarea {
-   border-radius: 15px;
-   width: 90%;
-   border: none;
-   resize: none;
-   height: 80px;
 }
 
 #feedback-content > a:link {
