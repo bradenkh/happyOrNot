@@ -83,7 +83,7 @@
    animation: slide-in 1s;
 }
 
-.star-menu-close {
+#star-menu-close {
    text-align: right;
    grid-row-start: 1;
    grid-row-end: 2;
