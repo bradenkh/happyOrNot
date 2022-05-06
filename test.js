@@ -140,8 +140,8 @@ function getUID() {
 }
 
 function buildBody() {
-   var email = document.getElementById("emailInput");
-   var feedbackText = document.getElementById("textFeedback");
+   var email = document.getElementById("emailInput").value;
+   var feedbackText = document.getElementById("textFeedback").value;
    var url = window.location.href;
    var uid = getUID();
    const body = {
@@ -155,9 +155,15 @@ function buildBody() {
 }
 
 function sendFeedback() {
-   var postUrl = "localhost:8080/feedback";
+   var postUrl = "https://glad-or-sad-backend.herokuapp.com/feedback";
    var postBody = buildBody();
    var xhr = new XMLHttpRequest();
    xhr.open("POST", postUrl, true);
+   xhr.setRequestHeader("Content-Type", "application/json");
+   console.log(JSON.stringify(postBody));
    xhr.send(JSON.stringify(postBody));
+   xhr.responseType = "text";
+   setTimeout(() => {
+      console.log(xhr.responseText);
+   }, 2000);
 }
